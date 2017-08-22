@@ -11,9 +11,9 @@
 		<link rel="shortcut icon" href="../favicon.ico">
 		<link href='http://fonts.googleapis.com/css?family=Playfair+Display:900,400|Lato:300,400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css?12" />
 		<link rel="stylesheet" type="text/css" href="css/dragdealer.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css?1" />
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
 		<script src="js/modernizr.custom.js"></script>
 	</head>
@@ -56,6 +56,59 @@
 							<h2>Vietnam<span>Description rapide du séjour</span></h2>
 							<button class="content-switch">Voir</button>
 						</div>
+						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>
 					</div>
 				</section><!-- /img-dragger-->
 				<!-- Content section -->
@@ -86,7 +139,7 @@
 							</li>
 						</ul> -->
 						<div id="instafeed">
-							<ul id="inde"></ul>
+							<ul id="inde" class="cbp-rfgrid"></ul>
 						</div>
 						<p class="related">
 							button
@@ -120,9 +173,10 @@
 			</div>
 		</div><!-- /container -->
     	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="js/gridster.js"></script>
 		<script src="js/dragdealer.js"></script>
 		<script src="js/classie.js"></script>
-    	<script src="js/dragslideshow.js"></script>
+    	<script src="js/dragslideshow.js?15"></script>
 		<script src="js/jquery.fancybox.min.js"></script>
 		<script src="js/jquery.gridrotator.js"></script>
 		<!--<script src="js/instafeed.min.js?1156"></script>-->
@@ -172,7 +226,6 @@
 				switchBtnn.addEventListener( 'click', toggleSlideshow );
 				// close overlay
 				overlayClose.addEventListener( 'click', closeOverlay );
-
 			}());
 
 // 			$.fn.spectragram.accessData = {
@@ -220,7 +273,7 @@
 
 var token = '5848647513.1677ed0.fe48758d8b7e489392819649b4a4d234', // learn how to obtain it below
     userid = 5848647513, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
-    num_photos = 3; // how much photos do you want to get
+    num_photos = 99999; // how much photos do you want to get
 
 $.ajax({
 	url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent',
@@ -230,11 +283,10 @@ $.ajax({
 
 	success: function(data){
 		console.log(data.data);
-
 		for(x in data.data){
 
-var image = data.data[x].images.standard_resolution.url;
-var imageLarge = image.replace(/s[0-9]+x[0-9]+\/(sh[0-9]+.[0-9]+\/)*/,"");
+			var image = data.data[x].images.standard_resolution.url,
+			imageLarge = image.replace(/s[0-9]+x[0-9]+\/(sh[0-9]+.[0-9]+\/)*/,"");
 
 			if(data.data[x].tags[0] == 'pikipackersinde'){	
 			$('#inde').append('<li><a rel="group" class="fancybox" data-fancybox="images-'+data.data[x].tags[0]+'" href="'+imageLarge+'" target="_blank"><img src="'+data.data[x].images.low_resolution.url+'"></a></li>');
@@ -252,18 +304,5 @@ var imageLarge = image.replace(/s[0-9]+x[0-9]+\/(sh[0-9]+.[0-9]+\/)*/,"");
 
 
 		</script>
-<!-- 		<script>
-	$(document).ready(function(){
-		var fancy = $('a.fancybox');
-		var i=0,j='',val='';
-		for(i;i<=fancy.length;i++)
-		{
-		j=$(fancy[i]).attr('href');
-		val = j.replace('/s640x640/sh0.08/','/');
-		$(fancy[i]).attr('href',val);
-	}
-	$('img.fancybox').fancybox();
-	});
-		</script> -->
 	</body>
 </html>

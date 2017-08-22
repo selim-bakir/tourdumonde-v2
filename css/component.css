@@ -276,6 +276,11 @@ button.content-switch:hover {
 	opacity: 1;
 }
 
+@keyframes nomAnim{
+	 from { top:10px; }
+     50%  { top:20px; }
+     to   { top:10px; }
+}
 button.content-switch::before {
 	content: '\e097';
 	font-family: 'feathericons';
@@ -287,9 +292,17 @@ button.content-switch::before {
 	text-indent: 0;
 	font-size: 1.5em;
 	line-height: 0.75;
+	top: 10px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	animation: nomAnim 1s ease infinite;
+     -webkit-animation: nomAnim 1s ease infinite;
+        -moz-animation: nomAnim 1s ease infinite;
+         -ms-animation: nomAnim 1s ease infinite;
+          -o-animation: nomAnim 1s ease infinite;
+             animation: nomAnim 1s ease infinite;
 }
+
 
 .show-content .current button.content-switch {
 	border-color: #c5d3d6;
@@ -321,9 +334,9 @@ button.content-switch::before {
 }
 
 .pages .content {
-	background: #dfe3e3;
+	background: rgba(40,49,56,0.95);
 	text-align: center;
-	color: #545b61;
+	color: #dedede;
 	font-size: 1.5em;
 }
 
@@ -347,7 +360,7 @@ button.content-switch::before {
 .pages .content h2 {
 	font-size: 3em;
 	max-width: 70%;
-	color: #34495e;
+	color: #dedede;
 	padding: 13px 0 1em;
 	text-align:left;
 	margin-left: 45px;
