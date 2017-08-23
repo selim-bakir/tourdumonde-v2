@@ -147,7 +147,6 @@
 			// reveal content
 			slide.querySelector( 'button.content-switch' ).addEventListener( 'click', function() {
 				self._toggleContent( slide );
-				$('.slider-switch').toggleClass('hide');
 			} );
 		} );
 
