@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tour du monde</title>
+		<meta name="description" content="Draggable Dual-View Slideshow: A Slideshow with two views and content area" />
+		<meta name="keywords" content="draggable, slideshow, fullscreen, carousel, views, zoomed, 3d transform, perspective, dragdealer" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link href='http://fonts.googleapis.com/css?family=Playfair+Display:900,400|Lato:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/overlay.css" />
+		<link rel="stylesheet" type="text/css" href="css/dragdealer.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css?23" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<header id="header" class="codrops-header">
+				<h1>TOUR DU MONDE</h1>
+				<span class="message">This mobile version does not have the slideshow switch</span>
+				<button class="slider-switch">Switch view</button>
+			</header>
+			<div id="overlay" class="overlay">
+				<div class="info">
+					<h2>Comment ca marche ?</h2>
+					<span class="info-drag">Avec ta souris, ton index ou ta b...</span>
+					<span class="info-keys">Le clavier</span>
+					<span class="info-switch">Changer de vue</span>
+					<span class="info-world">Itinéraire</span>
+					<button>C'est parti !</button>
+				</div>
+			</div>
+			<button id="trigger-overlay" type="button">&nbsp;</button>
+			<div class="overlay-map overlay-map-contentpush">
+				<div>
+					<button type="button" class="overlay-map-close">Close</button>
+				</div>
+				<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Jlm0R3biecN-n8jInvyPl5UsKRA" width="100%" height="100%"></iframe>
+			</div>
+			<div id="slideshow" class="dragslider">
+				<section class="img-dragger img-dragger-large dragdealer">
+					<div class="handle">
+						<div class="slide" data-content="content-1">
+							<div class="img-wrap"><img src="img/1.jpg" alt="img1"/></div>
+							<h2>Inde<span>2 mois au pays de Gandhi</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>
+						<div class="slide" data-content="content-2">
+							<div class="img-wrap"><img src="img/2.jpg?1" alt="img2"/></div>
+							<h2>Birmanie <span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>
+						<div class="slide" data-content="content-3">
+							<div class="img-wrap"><img src="img/3.jpg?1" alt="img3"/></div>
+							<h2>Laos<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>
+						<div class="slide" data-content="content-4">
+							<div class="img-wrap"><img src="img/4.jpg" alt="img4"/></div>
+							<h2>Vietnam<span>Description rapide du séjour</span></h2>
+							<button class="content-switch">Voir</button>
+						</div>
+					</div>
+				</section><!-- /img-dragger-->
+				<!-- Content section -->
+				<section class="pages">
+					<div class="content" data-content="content-1">
+						<h2>Inde<span>2 mois / 60 jours / 1440 heures / 86 400 minutes / 5 184 000 secondes</span></h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
+						<div class="map"></div>
+						<div id="instafeed">
+							<ul id="inde" class="cbp-rfgrid"></ul>
+						</div>
+					</div>
+					<div class="content" data-content="content-2">
+						<h2>Birmanie <span>short-desc</span></h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
+						<div class="map">&nbsp</div>
+						<div id="instafeed">
+							<ul id="birmanie" class="cbp-rfgrid"></ul>
+						</div>
+					</div>
+					<div class="content" data-content="content-3">
+						<h2>Laos <span>short-desc</span></h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
+					</div>
+					<div class="content" data-content="content-4">
+						<h2>Vietnam <span>short-desc</span></h2>
+						<p>Lorem ipsu m dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
+					</div>
+				</section>
+			</div>
+		</div><!-- /container -->
+    	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="js/dragdealer.js"></script>
+		<script src="js/classie.js"></script>
+    	<script src="js/dragslideshow.js?15667899"></script>
+		<script src="js/jquery.fancybox.min.js"></script>
+		<script src="js/overlay.js"></script>
+		
+		<script>
+			$(document).on('scroll', function(){
+				console.log('hello');
+			});
+			(function() {
+
+				var overlay = document.getElementById( 'overlay' ),
+					overlayClose = overlay.querySelector( 'button' ),
+					header = document.getElementById( 'header' )
+					switchBtnn = header.querySelector( 'button.slider-switch' ),
+					toggleBtnn = function() {
+						if( slideshow.isFullscreen ) {
+							classie.add( switchBtnn, 'view-maxi' );
+						}
+						else {
+							classie.remove( switchBtnn, 'view-maxi' );
+						}
+					},
+					toggleCtrls = function() {
+						if( !slideshow.isContent ) {
+							classie.add( header, 'hide' );
+							classie.add( switchBtnn, 'hide' );
+						}
+					},
+					toggleCompleteCtrls = function() {
+						if( !slideshow.isContent ) {
+							classie.remove( header, 'hide' );
+							classie.remove( switchBtnn, 'hide' );
+						}
+					},
+					slideshow = new DragSlideshow( document.getElementById( 'slideshow' ), {
+						// toggle between fullscreen and minimized slideshow
+						onToggle : toggleBtnn,
+						// toggle the main image and the content view
+						onToggleContent : toggleCtrls,
+						// toggle the main image and the content view (triggered after the animation ends)
+						onToggleContentComplete : toggleCompleteCtrls
+					}),
+					toggleSlideshow = function() {
+						slideshow.toggle();
+						toggleBtnn();
+					},
+					closeOverlay = function() {
+						classie.add( overlay, 'hide' );
+					};
+
+				// toggle between fullscreen and small slideshow
+				switchBtnn.addEventListener( 'click', toggleSlideshow );
+				// close overlay
+				overlayClose.addEventListener( 'click', closeOverlay );
+			}());
+
+
+var token = '5848647513.1677ed0.fe48758d8b7e489392819649b4a4d234', // learn how to obtain it below
+    userid = 5848647513, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
+    num_photos = 99999; // how much photos do you want to get
+
+$.ajax({
+	url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent',
+	dataType: 'jsonp',
+	type: 'GET',
+	data: {access_token: token, count: num_photos},
+
+	success: function(data){
+		console.log(data.data);
+		for(x in data.data){
+
+			var image = data.data[x].images.standard_resolution.url,
+			imageLarge = image.replace(/s[0-9]+x[0-9]+\/(sh[0-9]+.[0-9]+\/)*/,"");
+
+			if(data.data[x].tags[0] == 'pikipackersinde'){	
+			$('#inde').append('<li><a rel="group" class="fancybox" data-fancybox="images-'+data.data[x].tags[0]+'" href="'+imageLarge+'" target="_blank"><img src="'+data.data[x].images.low_resolution.url+'"></a></li>');
+		}
+			if(data.data[x].tags[0] == 'pikipackersbirmanie'){	
+			$('#birmanie').append('<li><a rel="group" class="fancybox" data-fancybox="images-'+data.data[x].tags[0]+'" href="'+imageLarge+'" target="_blank"><img src="'+data.data[x].images.low_resolution.url+'"></a></li>');
+			}
+		}
+	},
+	error: function(data){
+		console.log(data);
+	}
+});
+
+$(function() {
+	$(".fancyboxIframe").fancybox({
+		maxWidth	: 900,
+		maxHeight	: 600,
+		fitToView	: false,
+		width		: '90%',
+		height		: '90%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+    iframe: {
+	    scrolling : 'auto',
+	    preload   : true
+    }
+	});
+});
+
+
+		</script>
+	</body>
+</html>
