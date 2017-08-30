@@ -379,9 +379,10 @@ Dragdealer.prototype = {
     this.activity = false;
     this.startDrag();
   },
-  onDocumentMouseMove: function(e) {
+ onDocumentMouseMove: function(e) {
     Cursor.refresh(e);
     if (this.dragging) {
+      if( !this.activity && e.movementX === 0 && e.movementY === 0 ) return;
       this.activity = true;
     }
   },
