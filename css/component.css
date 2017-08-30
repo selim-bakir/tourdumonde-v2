@@ -230,7 +230,7 @@ button.slider-switch:hover {
 	width: 100%;
 	text-align: center;
 	color: #34495e;
-	-webkit-animation: slideUpFade 0.4s 0.1s;
+	-webkit-animation: slideUpFade 0.4s 0.1s both;
 }
 
 @-webkit-keyframes slideUpFade {
