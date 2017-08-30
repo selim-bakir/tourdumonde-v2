@@ -12,8 +12,9 @@
 		<link href='http://fonts.googleapis.com/css?family=Playfair+Display:900,400|Lato:300,400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/overlay.css" />
 		<link rel="stylesheet" type="text/css" href="css/dragdealer.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css?23" />
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
 		<script src="js/modernizr.custom.js"></script>
 	</head>
@@ -30,8 +31,16 @@
 					<span class="info-drag">Avec ta souris, ton index ou ta b...</span>
 					<span class="info-keys">Le clavier</span>
 					<span class="info-switch">Changer de vue</span>
+					<span class="info-world">Itinéraire</span>
 					<button>C'est parti !</button>
 				</div>
+			</div>
+			<button id="trigger-overlay" type="button">&nbsp;</button>
+			<div class="overlay-map overlay-map-contentpush">
+				<div>
+					<button type="button" class="overlay-map-close">Close</button>
+				</div>
+				<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Jlm0R3biecN-n8jInvyPl5UsKRA" width="100%" height="100%"></iframe>
 			</div>
 			<div id="slideshow" class="dragslider">
 				<section class="img-dragger img-dragger-large dragdealer">
@@ -63,7 +72,7 @@
 					<div class="content" data-content="content-1">
 						<h2>Inde<span>2 mois / 60 jours / 1440 heures / 86 400 minutes / 5 184 000 secondes</span></h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
-						<div class="map"><a class="fancyboxIframe fancybox.iframe" href="https://www.google.com/maps/d/u/0/embed?mid=17ujWGBlNg3oTwxXFXI39XSejJ4o">Google map</a></div>
+						<div class="map"></div>
 						<div id="instafeed">
 							<ul id="inde" class="cbp-rfgrid"></ul>
 						</div>
@@ -82,7 +91,7 @@
 					</div>
 					<div class="content" data-content="content-4">
 						<h2>Vietnam <span>short-desc</span></h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
+						<p>Lorem ipsu m dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
 					</div>
 				</section>
 			</div>
@@ -92,6 +101,7 @@
 		<script src="js/classie.js"></script>
     	<script src="js/dragslideshow.js?15667899"></script>
 		<script src="js/jquery.fancybox.min.js"></script>
+		<script src="js/overlay.js"></script>
 		
 		<script>
 			$(document).on('scroll', function(){
