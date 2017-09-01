@@ -1,21 +1,106 @@
-<!--<Deject>-->
-<!--#include virtual="/fr/next/html/static/static_p5_top.html"-->
-<!--</Deject>-->
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tour du monde</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Playfair+Display:900,400|Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="./styles/main-index.css" />
 
-<!-- smoosh -->
-<!-- build:css /styles/main-index.css -->
-<link rel="stylesheet" href="/styles/main-index.css">
-<!-- endbuild -->
-<!-- endsmoosh -->
+        <script src="/scripts/modernizr.custom.js"></script>
+  </head>
+  <body>
 
-<div id="app"></div>
+    <div class="container">
+      <header id="header" class="codrops-header">
+        <h1>TOUR DU MONDE</h1> 
+        <span class="message">This mobile version does not have the slideshow switch</span>
+        <button class="slider-switch">Switch view</button>
+      </header>
+      <div id="overlay" class="overlay" style="display:none;">
+        <div class="info">
+          <h2>Comment ca marche ?</h2>
+          <span class="info-drag">Avec ta souris, ton index ou ta b...</span>
+          <span class="info-keys">Le clavier</span>
+          <span class="info-switch">Changer de vue</span>
+          <span class="info-world">Itinéraire</span>
+          <button>C'est parti !</button>
+        </div>
+      </div>
+      <button id="trigger-overlay" type="button">&nbsp;</button>
+      <div class="overlay-map overlay-map-contentpush">
+        <div>
+          <h2>Itinéraire du voyages</h2>
+          <button type="button" class="overlay-map-close">Close</button>
+        </div>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=17ujWGBlNg3oTwxXFXI39XSejJ4o" width="100%" height="100%"></iframe>
+      </div>
+      <div id="slideshow" class="dragslider">
+        <section class="img-dragger img-dragger-large dragdealer">
+          <div class="handle">
+            <div class="slide" data-content="content-1">
+              <div class="img-wrap"><img src="./images/1.jpg" alt="img1"/></div>
+              <h2>Inde<span>2 mois au pays de Gandhi</span></h2>
+              <button class="content-switch">Voir</button>
+            </div>
+            <div class="slide" data-content="content-2">
+              <div class="img-wrap"><img src="./images/2.jpg?1" alt="img2"/></div>
+              <h2>Birmanie <span>Description rapide du séjour</span></h2>
+              <button class="content-switch">Voir</button>
+            </div>
+            <div class="slide" data-content="content-3">
+              <div class="img-wrap"><img src="./images/3.jpg?1" alt="img3"/></div>
+              <h2>Laos<span>Description rapide du séjour</span></h2>
+              <button class="content-switch">Voir</button>
+            </div>
+            <div class="slide" data-content="content-4">
+              <div class="img-wrap"><img src="./images/4.jpg" alt="img4"/></div>
+              <h2>Vietnam<span>Description rapide du séjour</span></h2>
+              <button class="content-switch">Voir</button>
+            </div>
+          </div>
+        </section><!-- /img-dragger-->
+        <!-- Content section -->
+        <section class="pages">
+          <div class="content" data-content="content-1">
+            <h2>Inde<span>2 mois / 60 jours / 1440 heures / 86 400 minutes / 5 184 000 secondes</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
+            <div class="map"></div>
+            <div id="instafeed">
+              <ul id="inde" class="cbp-rfgrid"></ul>
+            </div>
+          </div>
+          <div class="content" data-content="content-2">
+            <h2>Birmanie <span>short-desc</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
+            <div class="map">&nbsp</div>
+            <div id="instafeed">
+              <ul id="birmanie" class="cbp-rfgrid"></ul>
+            </div>
+          </div>
+          <div class="content" data-content="content-3">
+            <h2>Laos <span>short-desc</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
+          </div>
+          <div class="content" data-content="content-4">
+            <h2>Vietnam <span>short-desc</span></h2>
+            <p>Lorem ipsu m dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="./scripts/dragdealer.js"></script>
+    <script src="./scripts/classie.js"></script>
+    <script src="./scripts/dragslideshow.js?15667899"></script>
+    <script src="./scripts/jquery.fancybox.min.js"></script>
+    <script src="./scripts/overlay.js"></script>
+    <script src="/scripts/main-index.js"></script>
 
-<!-- smoosh -->
-<!-- build:js /scripts/main-index.js -->
-<script src="/scripts/main-index.bundle.js"></script>
-<!-- endbuild -->
-<!-- endsmoosh -->
-
-<!--<Deject>-->
-<!--#include virtual="/fr/next/html/static/static_p5_bottom.html"-->
-<!--</Deject>-->
+  </body>
+</html>
