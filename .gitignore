@@ -1,0 +1,10 @@
+node_modules
+dist
+.tmp
+.log
+PSD
+tar
+bower_components
+test/bower_components
+.config.json
+btc-collection-design.sublime-workspace

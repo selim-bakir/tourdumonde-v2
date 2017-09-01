@@ -253,8 +253,8 @@ a:hover, a:focus {
 	float: left;
 	overflow: hidden;
 	width: 16.6666667%; /* Fallback */
-	width: -webkit-calc(100% / 7);
-	width: calc(100% /7);
+	width: -webkit-calc(100% / 5);
+	width: calc(100% / 5);
 }
 
 .cbp-rfgrid li:hover a:before{
@@ -335,7 +335,7 @@ a:hover, a:focus {
 	.cbp-rfgrid li {
 		width: 20%; /* Fallback */
 		width: -webkit-calc(100% / 5);
-		width: calc(100% / 7);
+		width: calc(100% / 5);
 	}
 }
 
