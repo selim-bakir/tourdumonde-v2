@@ -68,7 +68,7 @@
 	 */
 	DragSlideshow.prototype.options = {
 		perspective : '1200',
-		slideshowRatio : 0.6, // between: 0,1
+		slideshowRatio : 0.55, // between: 0,1
 		onToggle : function() { return false; },
 		onToggleContent : function() { return false; },
 		onToggleContentComplete : function() { return false; }
@@ -171,7 +171,7 @@
 					// down key
 					case 40:
 						// if not fullscreen don't reveal the content. If you want to navigate directly to the content then remove this check.
-						if( !self.isFullscreen ) return;
+						// if( !self.isFullscreen ) return;
 						self._toggleContent( currentSlide );
 						break;
 					// right and left keys
@@ -181,11 +181,20 @@
 					case 39:
 						self.dd.setStep( self.current + 2 );
 						break;
+					// enter key	
+					case 13 :
+						self.toggle();
+						break;	
 				}
 			}
 		} );
 	}
 
+$('.btn-nav.right').click(function(){
+	var nextContent = $('.content.show').next();
+// 	$('.content').siblings().removeClass('show');
+	nextContent.addClass('show')
+})
 	/**
 	 * gets the content page of the current slide
 	 */
@@ -248,11 +257,11 @@
 	/**
 	 * initialize the Dragdealer plugin
 	 */
-	DragSlideshow.prototype._initDragDealer = function() {
+	DragSlideshow.prototype._initDragDealer = function() { 
 		var self = this;
 		this.dd = new Dragdealer( this.imgDragger, {
 			steps: this.slidesCount,
-			speed: 0.4,
+			speed: 0.3,
 			loose: true,
 			requestAnimationFrame : true,
 			callback: function( x, y ) {

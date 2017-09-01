@@ -762,7 +762,6 @@ var stopEventPropagation = function(e) {
   e.cancelBubble = true;
 };
 
-
 var Cursor = {
   /**
    * Abstraction for making the combined mouse or touch position available at

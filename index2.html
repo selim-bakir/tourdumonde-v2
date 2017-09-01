@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+
+  </head>
+  <body>
+      HELLO
+<script>
+myBodyOBJ = document.body||document.getElementsByTagName("body")[0];
+
+// This is not working:
+//myBodyOBJ.addEventListener("scroll", myFunction);
+debugger;
+// It is working with this code only:
+myBodyOBJ.onscroll = function() {myFunction()};
+
+function myFunction() {
+    console.log('you rocks !!!!');
+}
+</script>
+  </body>
+</html>
