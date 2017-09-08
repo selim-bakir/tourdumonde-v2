@@ -37,7 +37,9 @@
 		},
 		closeOverlay = function() {
 			classie.add( overlay, 'hide' );
-			$('.slider-switch').click();
+			if ($(window).width() > 960) {
+				$('.slider-switch').click();
+			}
 		};
 
 	// toggle between fullscreen and small slideshow
@@ -66,16 +68,9 @@ $.ajax({
 	success: function(data){
 		console.log(data.data);
 		for(x in data.data){
-
 			var image = data.data[x].images.standard_resolution.url,
 			imageLarge = image.replace(/s[0-9]+x[0-9]+\/(sh[0-9]+.[0-9]+\/)*/,"");
-
-			if(data.data[x].tags[0] == 'pikipackersinde'){	
-			$('#inde').append('<li><a rel="group" class="fancybox" data-fancybox="images-'+data.data[x].tags[0]+'" href="'+imageLarge+'" target="_blank"><img src="'+data.data[x].images.low_resolution.url+'"></a></li>');
-		}
-			if(data.data[x].tags[0] == 'pikipackersbirmanie'){	
-			$('#birmanie').append('<li><a rel="group" class="fancybox" data-fancybox="images-'+data.data[x].tags[0]+'" href="'+imageLarge+'" target="_blank"><img src="'+data.data[x].images.low_resolution.url+'"></a></li>');
-			}
+			$('#'+data.data[x].tags[0]).append('<li><a rel="group" class="fancybox" data-fancybox="images-'+data.data[x].tags[0]+'" href="'+imageLarge+'" target="_blank"><img src="'+data.data[x].images.low_resolution.url+'"></a></li>');
 		}
 	},
 	error: function(data){
