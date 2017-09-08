@@ -22,6 +22,7 @@
   font-style: normal;
 }
 
+@import 'vars.scss';
 
 html, body {
   height: 100%;
@@ -448,13 +449,16 @@ button.content-switch {
     font-family: 'Segoe UI', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
     font-weight: 100;
     margin-left: 45px;
-    line-height: 32px;
+    line-height: 1.2em;
     &:last-child {
       padding: 5em 1em 8em;
       text-align: center;
       font-weight: bold;
       display: none;
     }
+     @include grid-media-query(lap) {
+       text-align: left;
+     }
   }
 }
 

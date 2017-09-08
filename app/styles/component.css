@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'feathericons';
   src: url("../fonts/feathericons/feathericons.eot?2h4ajg");
@@ -16,6 +17,50 @@
   src: url("../fonts/echelon_rg-webfont.woff2") format("woff2"), url("../fonts/echelon_rg-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+
+/**
+ * Media query mixin.
+ *
+ * It’s not great practice to define solid breakpoints up-front, preferring to
+ * modify your design when it needs it, rather than assuming you’ll want a
+ * change at ‘mobile’. However, as inuit.css is required to take a hands off
+ * approach to design decisions, this is the closest we can get to baked-in
+ * responsiveness. It’s flexible enough to allow you to set your own breakpoints
+ * but solid enough to be frameworkified.
+ *
+ * We define some broad breakpoints in our vars file that are picked up here
+ * for use in a simple media query mixin. Our options are:
+ *
+ * palm
+ * lap
+ * lap-and-up
+ * portable
+ * desk
+ * desk-wide
+ *
+ * Not using a media query will, naturally, serve styles to all devices.
+ *
+ * `@include grid-media-query(palm){ [styles here] }`
+ *
+ * We work out your end points for you:
+ */
+/**
+ * Tell when breakpoints start.
+ */
+body:before {
+  display: none; }
+  @media only screen and (max-width: 680px) {
+    body:before {
+      content: 'palm'; } }
+  @media only screen and (min-width: 681px) and (max-width: 1024px) {
+    body:before {
+      content: 'lap'; } }
+  @media only screen and (min-width: 1025px) {
+    body:before {
+      content: 'desk'; } }
+  @media only screen and (min-width: 1280px) {
+    body:before {
+      content: 'desk-wide'; } }
 
 html, body {
   height: 100%; }
@@ -366,12 +411,15 @@ button.content-switch::before {
   font-family: 'Segoe UI', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
   font-weight: 100;
   margin-left: 45px;
-  line-height: 32px; }
+  line-height: 1.2em; }
   .pages .content p:last-child {
     padding: 5em 1em 8em;
     text-align: center;
     font-weight: bold;
     display: none; }
+  @media only screen and (min-width: 681px) and (max-width: 1024px) {
+    .pages .content p {
+      text-align: left; } }
 
 .js .pages .content h2, .js .pages .content p {
   -webkit-transform: translate3d(0, 200px, 0);
