@@ -199,6 +199,8 @@ button.slider-switch:hover {
   -ms-user-select: none;
   user-select: none;
   vertical-align: top; }
+  .img-dragger .slide.coming-soon {
+    background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px); }
 
 .no-js .img-dragger .slide {
   width: 300px;

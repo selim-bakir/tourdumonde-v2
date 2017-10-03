@@ -187,6 +187,9 @@ button.slider-switch {
   -ms-user-select: none;
   user-select: none;
   vertical-align: top;
+  &.coming-soon{
+    background: repeating-linear-gradient(    45deg,    #606dbc,    #606dbc 10px,    #465298 10px,    #465298 20px  );
+  }
 }
 
 .no-js .img-dragger .slide {

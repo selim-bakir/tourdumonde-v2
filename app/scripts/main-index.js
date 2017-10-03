@@ -84,3 +84,10 @@ $.ajax({
 		console.log(data);
 	}
 });
+
+$(document).ready(function(){
+
+	
+	$('.slide.coming-soon .content-switch').hide()
+
+});
