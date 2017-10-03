@@ -1,8 +1,9 @@
 (function() {
 	var overlay = document.getElementById( 'overlay' ),
 		overlayClose = overlay.querySelector( 'button' ),
-		header = document.getElementById( 'header' )
+		header = document.getElementById( 'header' ),
 		switchBtnn = header.querySelector( 'button.slider-switch' ),
+		earthBtn = document.getElementById( 'trigger-overlay' ),
 		toggleBtnn = function() {
 			if( slideshow.isFullscreen ) {
 				classie.add( switchBtnn, 'view-maxi' );
@@ -15,12 +16,14 @@
 			if( !slideshow.isContent ) {
 				classie.add( header, 'hide' );
 				classie.add( switchBtnn, 'hide' );
+				classie.add( earthBtn, 'hide' );
 			}
 		},
 		toggleCompleteCtrls = function() {
 			if( !slideshow.isContent ) {
 				classie.remove( header, 'hide' );
 				classie.remove( switchBtnn, 'hide' );
+				classie.remove( earthBtn, 'hide' );
 			}
 		},
 		slideshow = new DragSlideshow( document.getElementById( 'slideshow' ), {
@@ -33,6 +36,7 @@
 		}),
 		toggleSlideshow = function() {
 			slideshow.toggle();
+			console.log('toggleSlideshow');
 			toggleBtnn();
 		},
 		closeOverlay = function() {
@@ -50,7 +54,10 @@
 
 }());
 
-
+$('.switch-max .slide.current').click(function(){
+	console.log('ici');
+		$('.slide.current .content-switch').click();
+});
 /********************* 
  *** INSTAGRAM API ***
  *********************/

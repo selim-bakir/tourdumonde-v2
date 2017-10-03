@@ -280,8 +280,8 @@ a {
     overflow: hidden;
     width: 16.6666667%;
     /* Fallback */
-    width: -webkit-calc(100% / 5);
-    width: calc(100% / 5);
+    width: -webkit-calc(97% / 5);
+    width: calc(97% / 5);
     &:hover a:before {
       content: '';
       width: 20%;
@@ -357,8 +357,8 @@ a {
   .cbp-rfgrid li {
     width: 20%;
     /* Fallback */
-    width: -webkit-calc(100% / 5);
-    width: calc(100% / 5);
+    width: -webkit-calc(97% / 5);
+    width: calc(97% / 5);
   }
 }
 

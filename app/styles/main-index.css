@@ -123,7 +123,7 @@ button.slider-switch {
   float: right;
   outline: none;
   overflow: hidden;
-  opacity: 0.7;
+  opacity: 1;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
   pointer-events: auto; }
@@ -273,7 +273,9 @@ button.slider-switch:hover {
 
 button.content-switch {
   border: 2px solid #fff;
-  width: 67px;
+  border-radius: 40px;
+  height: 60px;
+  width: 60px;
   text-indent: -10000%;
   overflow: hidden;
   white-space: nowrap;
@@ -283,18 +285,15 @@ button.content-switch {
   position: absolute;
   cursor: pointer;
   top: 100%;
-  right: 2%;
+  right: 4%;
   -webkit-transform: translate3d(-50%, -200%, 0);
   transform: translate3d(-50%, -200%, 0);
-  padding: 1em 2em;
-  font-size: 0.85em;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 400;
   outline: none;
   z-index: 1000;
-  opacity: 0.7;
+  opacity: 1;
   -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.3s, color 0.3s, border-color 0.3s;
   transition: transform 0.6s cubic-bezier(0.7, 0, 0.3, 1), opacity 0.3s, color 0.3s, border-color 0.3s; }
 
@@ -334,12 +333,15 @@ button.content-switch::before {
     top: 10px; } }
 
 .show-content .current button.content-switch {
-  border-color: #c5d3d6;
-  color: #c5d3d6;
-  -webkit-transform: translate3d(-50%, 100%, 0);
-  transform: translate3d(-50%, 100%, 0); }
+  border-color: #fff;
+  color: #fff;
+  -webkit-transform: translate3d(52%, 30%, 0);
+  transform: translate3d(52%, 30%, 0); }
   .show-content .current button.content-switch::before {
-    content: '\e096'; }
+    content: 'X';
+    top: 20px;
+    font-family: arial;
+    animation: none; }
 
 /* Content */
 .js .pages {
@@ -1054,8 +1056,8 @@ a {
     overflow: hidden;
     width: 16.6666667%;
     /* Fallback */
-    width: -webkit-calc(100% / 5);
-    width: calc(100% / 5); }
+    width: -webkit-calc(97% / 5);
+    width: calc(97% / 5); }
     .cbp-rfgrid li:hover a:before {
       content: '';
       width: 20%;
@@ -1118,8 +1120,8 @@ a {
   .cbp-rfgrid li {
     width: 20%;
     /* Fallback */
-    width: -webkit-calc(100% / 5);
-    width: calc(100% / 5); } }
+    width: -webkit-calc(97% / 5);
+    width: calc(97% / 5); } }
 
 @media screen and (max-width: 945px) {
   .cbp-rfgrid li {
