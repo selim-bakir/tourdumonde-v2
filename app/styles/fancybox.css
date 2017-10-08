@@ -26,7 +26,10 @@
   .fancybox-container ~ .fancybox-container {
     z-index: 99992; }
 
-.fancybox-bg, .fancybox-inner, .fancybox-outer, .fancybox-stage {
+.fancybox-bg,
+.fancybox-inner,
+.fancybox-outer,
+.fancybox-stage {
   position: absolute;
   top: 0;
   right: 0;
@@ -48,19 +51,23 @@
   opacity: .87;
   transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1); }
 
-.fancybox-caption-wrap, .fancybox-infobar, .fancybox-toolbar {
+.fancybox-caption-wrap,
+.fancybox-infobar,
+.fancybox-toolbar {
   position: absolute;
   direction: ltr;
   z-index: 99997;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .25s,visibility 0s linear .25s;
+  transition: opacity .25s, visibility 0s linear .25s;
   box-sizing: border-box; }
 
-.fancybox-show-caption .fancybox-caption-wrap, .fancybox-show-infobar .fancybox-infobar, .fancybox-show-toolbar .fancybox-toolbar {
+.fancybox-show-caption .fancybox-caption-wrap,
+.fancybox-show-infobar .fancybox-infobar,
+.fancybox-show-toolbar .fancybox-toolbar {
   opacity: 1;
   visibility: visible;
-  transition: opacity .25s,visibility 0s; }
+  transition: opacity .25s, visibility 0s; }
 
 .fancybox-infobar {
   top: 0;
@@ -72,7 +79,7 @@
   width: 70px;
   line-height: 44px;
   font-size: 13px;
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #ddd;
   background-color: rgba(30, 30, 30, 0.7);
@@ -113,9 +120,9 @@
   display: none;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition-property: opacity,-webkit-transform;
-  transition-property: transform,opacity;
-  transition-property: transform,opacity,-webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: transform, opacity;
+  transition-property: transform, opacity, -webkit-transform;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
   .fancybox-slide:before {
@@ -125,7 +132,10 @@
     height: 100%;
     width: 0; }
 
-.fancybox-is-sliding .fancybox-slide, .fancybox-slide--current, .fancybox-slide--next, .fancybox-slide--previous {
+.fancybox-is-sliding .fancybox-slide,
+.fancybox-slide--current,
+.fancybox-slide--next,
+.fancybox-slide--previous {
   display: block; }
 
 .fancybox-slide--image {
@@ -133,10 +143,12 @@
   .fancybox-slide--image:before {
     display: none; }
 
-.fancybox-slide--video .fancybox-content, .fancybox-slide--video iframe {
+.fancybox-slide--video .fancybox-content,
+.fancybox-slide--video iframe {
   background: #000; }
 
-.fancybox-slide--map .fancybox-content, .fancybox-slide--map iframe {
+.fancybox-slide--map .fancybox-content,
+.fancybox-slide--map iframe {
   background: #e5e3df; }
 
 .fancybox-slide--next {
@@ -226,7 +238,8 @@
   border: 0;
   height: 100%; }
 
-.fancybox-error, .fancybox-iframe {
+.fancybox-error,
+.fancybox-iframe {
   margin: 0;
   width: 100%;
   background: #fff; }
@@ -239,7 +252,7 @@
     margin: 0;
     padding: 0;
     color: #444;
-    font: 16px/20px Helvetica Neue,Helvetica,Arial,sans-serif; }
+    font: 16px/20px Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 .fancybox-close-small {
   position: absolute;
@@ -262,7 +275,7 @@
     right: 5px;
     width: 30px;
     height: 30px;
-    font: 20px/30px Arial,Helvetica Neue,Helvetica,sans-serif;
+    font: 20px/30px Arial, Helvetica Neue, Helvetica, sans-serif;
     color: #888;
     font-weight: 300;
     text-align: center;
@@ -300,11 +313,13 @@
   padding: 30px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   font-size: 14px;
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #fff;
   line-height: 20px;
   -webkit-text-size-adjust: none; }
-  .fancybox-caption a, .fancybox-caption button, .fancybox-caption select {
+  .fancybox-caption a,
+  .fancybox-caption button,
+  .fancybox-caption select {
     pointer-events: all; }
   .fancybox-caption a {
     color: #fff;
@@ -351,7 +366,8 @@
 .fancybox-button[disabled]:after, .fancybox-button[disabled]:before {
   opacity: .3; }
 
-.fancybox-button--left:after, .fancybox-button--right:after {
+.fancybox-button--left:after,
+.fancybox-button--right:after {
   top: 18px;
   width: 6px;
   height: 6px;
@@ -565,7 +581,8 @@
   .fancybox-infobar {
     left: 0;
     margin-left: 0; }
-  .fancybox-button--left, .fancybox-button--right {
+  .fancybox-button--left,
+  .fancybox-button--right {
     display: none !important; }
   .fancybox-caption {
     padding: 20px 0;
@@ -601,7 +618,8 @@
   border-style: solid;
   border-width: 0 2px; }
 
-.fancybox-button--thumbs, .fancybox-thumbs {
+.fancybox-button--thumbs,
+.fancybox-thumbs {
   display: none; }
 
 @media (min-width: 800px) {
@@ -614,7 +632,7 @@
       height: 3px;
       top: calc(50% - 2px);
       left: calc(50% - 2px);
-      box-shadow: 0 -4px 0,-4px -4px 0,4px -4px 0,inset 0 0 0 32px,-4px 0 0,4px 0 0,0 4px 0,-4px 4px 0,4px 4px 0; }
+      box-shadow: 0 -4px 0, -4px -4px 0, 4px -4px 0, inset 0 0 0 32px, -4px 0 0, 4px 0 0, 0 4px 0, -4px 4px 0, 4px 4px 0; }
   .fancybox-thumbs {
     position: absolute;
     top: 0;

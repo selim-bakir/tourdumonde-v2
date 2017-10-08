@@ -79,7 +79,8 @@ a {
   a:hover, a:focus {
     color: #c5d3d6; }
 
-.js .pikis-header, .js .codrops-top {
+.js .pikis-header,
+.js .codrops-top {
   position: fixed;
   z-index: 1000; }
 
@@ -116,7 +117,8 @@ a {
   background-color: rgba(40, 49, 56, 0.95);
   z-index: 10000; }
 
-.no-js .overlay, .overlay.hide {
+.no-js .overlay,
+.overlay.hide {
   -webkit-transition: opacity 0.3s, visibility 0.3s;
   transition: opacity 0.3s, visibility 0.3s;
   visibility: hidden; }

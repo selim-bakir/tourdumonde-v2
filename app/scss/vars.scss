@@ -1,4 +1,3 @@
-
 /**
  * Media query mixin.
  *
@@ -25,6 +24,8 @@
  *
  * We work out your end points for you:
  */
+
+
 /**
  * Tell when breakpoints start.
  */
@@ -34,57 +35,55 @@ $desk-start: 1025px !default;
 $desk-wide-start: 1280px !default;
 $desk-small: 1100px !default;
 $lap-small: 900px !default;
-
 $palm-end: $lap-start - 1px;
 $lap-end: $desk-start - 1px;
-
 @mixin grid-media-query($media-query) {
-    @if $media-query == palm {
+    @if $media-query==palm {
         @media only screen and (max-width: $palm-end) {
             @content;
         }
     }
-    @if $media-query == lap {
+    @if $media-query==lap {
         @media only screen and (min-width: $lap-start) and (max-width: $lap-end) {
             @content;
         }
     }
-    @if $media-query == lap-and-up {
+    @if $media-query==lap-and-up {
         @media only screen and (min-width: $lap-start) {
             @content;
         }
     }
-    @if $media-query == portable {
+    @if $media-query==portable {
         @media only screen and (max-width: $lap-end) {
             @content;
         }
     }
-    @if $media-query == desk {
+    @if $media-query==desk {
         @media only screen and (min-width: $desk-start) {
             @content;
         }
     }
-    @if $media-query == desk-wide {
+    @if $media-query==desk-wide {
         @media only screen and (min-width: $desk-wide-start) {
             @content;
         }
     }
-    @if $media-query == small-desk {
+    @if $media-query==small-desk {
         @media only screen and (min-width: $desk-start) and (max-width: $desk-small) {
             @content;
         }
     }
-    @if $media-query == large-desk {
+    @if $media-query==large-desk {
         @media only screen and (min-width: $desk-small) {
             @content;
         }
     }
-    @if $media-query == small-lap {
+    @if $media-query==small-lap {
         @media only screen and (min-width: $lap-start) and (max-width: $lap-small) {
             @content;
         }
     }
-    @if $media-query == large-lap {
+    @if $media-query==large-lap {
         @media only screen and (min-width: $lap-small) and (max-width: $lap-end) {
             @content;
         }
@@ -97,15 +96,12 @@ body:before {
     @include grid-media-query(palm) {
         content: 'palm';
     }
-
     @include grid-media-query(lap) {
         content: 'lap';
     }
-
     @include grid-media-query(desk) {
         content: 'desk';
     }
-
     // because sometimes it's help
     @include grid-media-query(desk-wide) {
         content: 'desk-wide';

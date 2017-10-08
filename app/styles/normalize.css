@@ -1,7 +1,20 @@
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
   display: block; }
 
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block; }
 
 audio:not([controls]) {
@@ -32,7 +45,8 @@ h1 {
 abbr[title] {
   border-bottom: 1px dotted; }
 
-b, strong {
+b,
+strong {
   font-weight: bold; }
 
 dfn {
@@ -47,8 +61,11 @@ mark {
   background: #ff0;
   color: #000; }
 
-code, kbd, pre, samp {
-  font-family: monospace,serif;
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
   font-size: 1em; }
 
 pre {
@@ -94,18 +111,24 @@ legend {
   border: 0;
   padding: 0; }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: 100%;
   margin: 0; }
 
-button, input {
+button,
+input {
   line-height: normal; }
 
-button, select {
+button,
+select {
   text-transform: none; }
 
-button, html input[type="button"] {
+button,
+html input[type="button"] {
   -webkit-appearance: button;
   cursor: pointer; }
 
@@ -113,7 +136,8 @@ input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer; }
 
-button[disabled], html input[disabled] {
+button[disabled],
+html input[disabled] {
   cursor: default; }
 
 input[type="checkbox"], input[type="radio"] {
@@ -128,7 +152,8 @@ input[type="search"] {
   input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none; }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 

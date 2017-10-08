@@ -64,7 +64,8 @@
 
 /* Menu style */
 /* Effects */
-html, body {
+html,
+body {
   overflow-x: hidden; }
 
 .container {
