@@ -134,24 +134,23 @@
         this.slides.forEach(function(slide) {
             // clicking the slides when not in isFullscreen mode
             slide.addEventListener('click', function() {
+                console.log('HELLO');
                 if (self.isFullscreen || self.dd.activity || self.isAnimating) return false;
 
                 if (self.slides.indexOf(slide) === self.current) {
                     self.toggle();
                 } else {
+                    debugger;
                     self.dd.setStep(self.slides.indexOf(slide) + 1);
                 }
             });
-            $('.next').click(function() {
-                self.dd.setStep(self.slides.indexOf(slide));
-            });
-            $('.prev').click(function() {
-                self.dd.setStep(self.slides.indexOf(slide) - 1);
-            });
+
             // reveal content
             slide.querySelector('button.content-switch').addEventListener('click', function() {
                 self._toggleContent(slide);
             });
+
+
         });
 
         // keyboard navigation events
@@ -259,21 +258,32 @@
      * initialize the Dragdealer plugin
      */
     DragSlideshow.prototype._initDragDealer = function() {
-        var self = this;
-        this.dd = new Dragdealer(this.imgDragger, {
-            steps: this.slidesCount,
-            speed: 0.3,
-            loose: true,
-            requestAnimationFrame: true,
-            callback: function(x, y) {
-                self._navigate(x, y);
-            }
-        });
-    }
+            var self = this;
+            this.dd = new Dragdealer(this.imgDragger, {
+                steps: this.slidesCount,
+                speed: 0.3,
+                loose: true,
+                requestAnimationFrame: true,
+                callback: function(x, y) {
+                    self._navigate(x, y);
+                }
+            });
 
-    /**
-     * DragDealer plugin callback: update current value
-     */
+
+            $('.next').click(function(slide) {
+                console.log(this.dd);
+                self.dd.setStep(self.dd.getStep()[0] + 1);
+                return false;
+            });
+            $('.prev').click(function(slide) {
+                console.log(this.dd);
+                self.dd.setStep(self.dd.getStep()[0] - 1);
+                return false;
+            });
+        }
+        /**
+         * DragDealer plugin callback: update current value
+         */
     DragSlideshow.prototype._navigate = function(x, y) {
         // add class "current" to the current slide / remove that same class from the old current slide
         classie.remove(this.slides[this.current || 0], 'current');
