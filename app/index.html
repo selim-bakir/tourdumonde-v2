@@ -21,6 +21,7 @@
             <h1>TOUR DU MONDE</h1>
             <!--<span class="message">This mobile version does not have the slideshow switch</span>-->
             <button class="slider-switch">Switch view</button>
+            <button id="trigger-overlay" type="button">&nbsp;</button>
         </header>
         <div id="overlay" class="overlay">
             <div class="info">
@@ -32,7 +33,6 @@
                 <button>C'est parti !</button>
             </div>
         </div>
-        <button id="trigger-overlay" type="button">&nbsp;</button>
         <div class="overlay-map overlay-map-contentpush">
             <div>
                 <h2>Itinéraire du voyages</h2>
@@ -46,31 +46,48 @@
                     <!-- Pays n°1 - Sri Lanka Cover -->
                     <div class="slide" data-content="content-1">
                         <div class="img-wrap"><span><img src="./images/covers/1.jpg" alt="Sri lanka cover"/></span></div>
-                        <h2>Sri Lanka<span>Description rapide du séjour</span><span class="prev">precedent</span><span class="next">suivant</span></h2>
+                        <h2>
+                            Sri Lanka<span>Description rapide du séjour</span>
+                            <span class="next prevnext"><img src="/images/next.svg" alt="suivant"  title="Suivant" /></span>
+                        </h2>
                         <button class="content-switch">Voir</button>
                     </div>
                     <!-- Pays n°2 - Inde Cover -->
                     <div class="slide coming-soon" data-content="content-2">
                         <div class="img-wrap"><img src="./images/covers/2.jpg" alt="Inde cover" /></div>
-                        <h2>Inde<span>2 mois au pays de Gandhi</span></h2>
+                        <h2>
+                            Inde<span>2 mois au pays de Gandhi</span>
+                            <span class="prev prevnext"><img src="/images/prev.svg" alt="precedent" title="Précédent" /></span>
+                            <span class="next prevnext"><img src="/images/next.svg" alt="suivant"  title="Suivant" /></span>
+                        </h2>
                         <button class="content-switch">Voir</button>
                     </div>
                     <!-- Pays n°3 - Birmanie Cover -->
                     <div class="slide" data-content="content-3">
                         <div class="img-wrap"><img src="./images/covers/3.jpg?1" alt="Birmanie cover" /></div>
-                        <h2>Birmanie <span>Description rapide du séjour</span><span class="prev">precedent</span><span class="next">suivant</span></h2>
+                        <h2>Birmanie <span>Description rapide du séjour</span>
+                            <span class="prev prevnext"><img src="/images/prev.svg" alt="precedent" title="Précédent" /></span>
+                            <span class="next prevnext"><img src="/images/next.svg" alt="suivant"  title="Suivant" /></span>
+                        </h2>
                         <button class="content-switch">Voir</button>
                     </div>
                     <!-- Pays n°4 - Laos Cover -->
                     <div class="slide" data-content="content-4">
                         <div class="img-wrap"><img src="./images/covers/4.jpg?1" alt="Laos cover" /></div>
-                        <h2>Laos<span>Description rapide du séjour</span></h2>
+                        <h2>
+                            Laos<span>Description rapide du séjour</span>
+                            <span class="prev prevnext"><img src="/images/prev.svg" alt="precedent" title="Précédent" /></span>
+                            <span class="next prevnext"><img src="/images/next.svg" alt="suivant"  title="Suivant" /></span>
+                        </h2>
                         <button class="content-switch">Voir</button>
                     </div>
                     <!-- Pays n°5 - Vietnam Cover -->
                     <div class="slide" data-content="content-5">
                         <div class="img-wrap"><span><img src="./images/covers/5.jpg" alt="Vietnam cover"/></span></div>
-                        <h2>Vietnam<span>Description rapide du séjour</span></h2>
+                        <h2>
+                            Vietnam<span>Description rapide du séjour</span>
+                            <span class="prev prevnext"><img src="/images/prev.svg" alt="precedent" title="Précédent" /></span>
+                        </h2>
                         <button class="content-switch">Voir</button>
                     </div>
 

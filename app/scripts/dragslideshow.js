@@ -309,6 +309,8 @@
         classie.remove(this.el, this.isFullscreen ? 'switch-max' : 'switch-min');
         classie.add(this.el, this.isFullscreen ? 'switch-min' : 'switch-max');
 
+
+
         var self = this,
             p = this.options.perspective,
             r = this.options.slideshowRatio,

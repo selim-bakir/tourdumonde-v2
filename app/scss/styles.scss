@@ -50,7 +50,7 @@ a {
     .pikis-header,
     .codrops-top {
         position: fixed;
-        z-index: 1000;
+        z-index: 9999;
     }
 }
 
@@ -412,4 +412,23 @@ a {
     .cbp-rfgrid li {
         width: 100%;
     }
+}
+
+.prev,
+.next {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: calc(50% - 50px);
+    img {
+        width: 100%;
+    }
+}
+
+.prev {
+    left: -170px;
+}
+
+.next {
+    right: -170px;
 }

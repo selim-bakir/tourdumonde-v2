@@ -82,7 +82,7 @@ a {
 .js .pikis-header,
 .js .codrops-top {
   position: fixed;
-  z-index: 1000; }
+  z-index: 9999; }
 
 /* Header */
 .pikis-header {
@@ -364,3 +364,19 @@ a {
 @media screen and (max-width: 300px) {
   .cbp-rfgrid li {
     width: 100%; } }
+
+.prev,
+.next {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: calc(50% - 50px); }
+  .prev img,
+  .next img {
+    width: 100%; }
+
+.prev {
+  left: -170px; }
+
+.next {
+  right: -170px; }
