@@ -82,7 +82,7 @@ a {
 .js .pikis-header,
 .js .codrops-top {
   position: fixed;
-  z-index: 9999; }
+  z-index: 999; }
 
 /* Header */
 .pikis-header {
@@ -367,16 +367,38 @@ a {
 
 .prev,
 .next {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: calc(50% - 50px); }
+  display: none; }
   .prev img,
   .next img {
-    width: 100%; }
+    display: none; }
 
-.prev {
-  left: -170px; }
+.current .prevnext {
+  display: block;
+  width: 140px;
+  height: 100px;
+  position: absolute;
+  top: calc(50% - 30%); }
+  .current .prevnext img {
+    display: block;
+    width: 45%;
+    position: absolute; }
 
-.next {
-  right: -170px; }
+.current .prev {
+  left: 5%; }
+  .current .prev img {
+    left: 5%; }
+
+.current .next {
+  right: 5%; }
+  .current .next img {
+    right: 5%; }
+
+.switch-min .current .prevnext img {
+  width: 35%;
+  position: absolute; }
+
+.switch-min .current .prev img {
+  left: 0; }
+
+.switch-min .current .next img {
+  right: 0; }

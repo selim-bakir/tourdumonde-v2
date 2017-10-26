@@ -240,8 +240,8 @@ button.slider-switch:hover {
   text-align: center; }
 
 .js .img-dragger-large .slide h2 {
-  width: 70%;
-  left: 15%;
+  width: 100%;
+  left: 0;
   top: 50%;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0); }
@@ -496,7 +496,7 @@ button.content-switch::before {
 
 @media screen and (max-width: 63.125em) {
   .dragslider h2 {
-    font-size: 2.8em; }
+    font-size: 20vw; }
   .pages .content {
     font-size: 100%; }
     .pages .content h2 {

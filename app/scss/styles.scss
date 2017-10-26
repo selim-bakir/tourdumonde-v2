@@ -50,7 +50,7 @@ a {
     .pikis-header,
     .codrops-top {
         position: fixed;
-        z-index: 9999;
+        z-index: 999;
     }
 }
 
@@ -414,21 +414,61 @@ a {
     }
 }
 
+
+
+//Prev/next 
+
+
 .prev,
 .next {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    top: calc(50% - 50px);
+    display:none;
     img {
-        width: 100%;
+        display:none;
     }
 }
 
-.prev {
-    left: -170px;
+.current{
+    .prevnext {
+        display:block;
+        width: 140px;
+        height: 100px;
+        position: absolute;
+        top: calc(50% - 30%);
+        img {
+            display:block;
+            width: 45%;
+            position:absolute;
+        }
+    }
+    .prev{
+        left: 5%;
+        img{
+            left: 5%;
+        }
+    }
+
+    .next{
+        right: 5%;
+        img{
+            right: 5%;
+        }
+    }
 }
 
-.next {
-    right: -170px;
+.switch-min {
+    .current{
+        .prevnext {
+            img{
+                width: 35%;
+                position:absolute;
+            }
+        }
+        .prev img {
+            left: 0;
+        }
+
+        .next img {
+            right: 0;
+        }
+    }
 }

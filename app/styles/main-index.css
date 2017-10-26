@@ -241,8 +241,8 @@ button.slider-switch:hover {
   text-align: center; }
 
 .js .img-dragger-large .slide h2 {
-  width: 70%;
-  left: 15%;
+  width: 100%;
+  left: 0;
   top: 50%;
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0); }
@@ -497,7 +497,7 @@ button.content-switch::before {
 
 @media screen and (max-width: 63.125em) {
   .dragslider h2 {
-    font-size: 2.8em; }
+    font-size: 20vw; }
   .pages .content {
     font-size: 100%; }
     .pages .content h2 {
@@ -642,6 +642,7 @@ body {
   width: 60px;
   height: 60px;
   right: 10%;
+  top: 56px;
   background: url(./../images/earth.png);
   border-radius: 50%;
   background-size: 110px;
@@ -909,7 +910,7 @@ a {
 .js .pikis-header,
 .js .codrops-top {
   position: fixed;
-  z-index: 9999; }
+  z-index: 999; }
 
 /* Header */
 .pikis-header {
@@ -1194,19 +1195,41 @@ a {
 
 .prev,
 .next {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: calc(50% - 50px); }
+  display: none; }
   .prev img,
   .next img {
-    width: 100%; }
+    display: none; }
 
-.prev {
-  left: -170px; }
+.current .prevnext {
+  display: block;
+  width: 140px;
+  height: 100px;
+  position: absolute;
+  top: calc(50% - 30%); }
+  .current .prevnext img {
+    display: block;
+    width: 45%;
+    position: absolute; }
 
-.next {
-  right: -170px; }
+.current .prev {
+  left: 5%; }
+  .current .prev img {
+    left: 5%; }
+
+.current .next {
+  right: 5%; }
+  .current .next img {
+    right: 5%; }
+
+.switch-min .current .prevnext img {
+  width: 35%;
+  position: absolute; }
+
+.switch-min .current .prev img {
+  left: 0; }
+
+.switch-min .current .next img {
+  right: 0; }
 
 /**
  * Dragdealer.js 0.9.7

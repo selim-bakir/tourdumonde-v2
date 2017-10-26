@@ -134,13 +134,11 @@
         this.slides.forEach(function(slide) {
             // clicking the slides when not in isFullscreen mode
             slide.addEventListener('click', function() {
-                console.log('HELLO');
                 if (self.isFullscreen || self.dd.activity || self.isAnimating) return false;
 
                 if (self.slides.indexOf(slide) === self.current) {
                     self.toggle();
                 } else {
-                    debugger;
                     self.dd.setStep(self.slides.indexOf(slide) + 1);
                 }
             });
@@ -254,6 +252,9 @@
         }
     }
 
+
+    var PrevNext = slideshow.querySelector('.prevnext');
+
     /**
      * initialize the Dragdealer plugin
      */
@@ -311,6 +312,7 @@
 
 
 
+
         var self = this,
             p = this.options.perspective,
             r = this.options.slideshowRatio,
@@ -346,6 +348,7 @@
             self.isFullscreen = !self.isFullscreen;
 
             self.isAnimating = false;
+            console.log('jpasse par là');
         };
 
         if (support.transitions) {

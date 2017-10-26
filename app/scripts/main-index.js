@@ -1,11 +1,11 @@
 (function() {
     var overlay = document.getElementById('overlay'),
+        htmlTag = document.querySelector('html'),
         slideshow = document.getElementById('slideshow'),
         overlayClose = overlay.querySelector('button'),
         header = document.getElementById('header'),
         switchBtnn = header.querySelector('button.slider-switch'),
-        earthBtn = document.getElementById('trigger-overlay'),
-        PrevNext = slideshow.querySelector('span.prevnext'),
+        earthBtn = document.getElementById('trigger-overlay');
         toggleBtnn = function() {
             if (slideshow.isFullscreen) {
                 classie.add(switchBtnn, 'view-maxi');
@@ -25,6 +25,7 @@
                 classie.remove(header, 'hide');
                 classie.remove(switchBtnn, 'hide');
                 classie.remove(earthBtn, 'hide');
+                classie.remove(PrevNext, 'hide');
             }
         },
         slideshow = new DragSlideshow(document.getElementById('slideshow'), {
