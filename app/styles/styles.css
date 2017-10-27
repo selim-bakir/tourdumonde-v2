@@ -266,20 +266,33 @@ a {
     overflow: hidden;
     width: 16.6666667%;
     /* Fallback */
-    width: -webkit-calc(97% / 5);
-    width: calc(97% / 5); }
+    width: -webkit-calc(100% / 5);
+    width: calc(100% / 5); }
     .cbp-rfgrid li:hover a:before {
       content: '';
-      width: 20%;
-      height: 20%;
-      background: url(../images/loupe.svg);
+      width: 25%;
+      height: 1px;
+      background-color: #fff;
       display: block;
       position: absolute;
       background-size: contain;
-      left: calc(50% - 10%);
-      top: calc(50% - 10%);
+      left: 35%;
+      top: 50%;
       cursor: pointer;
       z-index: 10; }
+    .cbp-rfgrid li:hover a:after {
+      content: '';
+      width: 25%;
+      height: 1px;
+      background-color: #fff;
+      display: block;
+      position: absolute;
+      background-size: contain;
+      left: 35%;
+      top: 50%;
+      cursor: pointer;
+      z-index: 10;
+      transform: rotate(90deg); }
     .cbp-rfgrid li a {
       display: block;
       width: 100%;
@@ -330,8 +343,8 @@ a {
   .cbp-rfgrid li {
     width: 20%;
     /* Fallback */
-    width: -webkit-calc(97% / 5);
-    width: calc(97% / 5); } }
+    width: -webkit-calc(100% / 5);
+    width: calc(100% / 5); } }
 
 @media screen and (max-width: 945px) {
   .cbp-rfgrid li {
@@ -380,7 +393,7 @@ a {
   top: calc(50% - 30%); }
   .current .prevnext img {
     display: block;
-    width: 45%;
+    width: 4vw;
     position: absolute; }
 
 .current .prev {

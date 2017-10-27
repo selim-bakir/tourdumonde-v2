@@ -247,6 +247,17 @@ button.slider-switch:hover {
   -webkit-transform: translate3d(0, -50%, 0);
   transform: translate3d(0, -50%, 0); }
 
+.js .img-dragger-large .slide.active h2:before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: url("/images/pin.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 20%;
+  left: 26%; }
+
 .img-dragger-small .slide h2 {
   font-size: 3.5em;
   padding-top: 0.51em;
@@ -291,7 +302,7 @@ button.content-switch {
   position: absolute;
   cursor: pointer;
   top: 100%;
-  right: 4%;
+  left: calc(100vw - 50%);
   -webkit-transform: translate3d(-50%, -200%, 0);
   transform: translate3d(-50%, -200%, 0);
   line-height: 1;
@@ -342,12 +353,26 @@ button.content-switch::before {
   border-color: #fff;
   color: #fff;
   -webkit-transform: translate3d(52%, 30%, 0);
-  transform: translate3d(52%, 30%, 0); }
+  transform: translate3d(42vw, 30%, 0); }
+  @media screen and (max-width: 1024px) {
+    .show-content .current button.content-switch {
+      transform: translate3d(40vw, 30%, 0); } }
+  @media screen and (max-width: 850px) {
+    .show-content .current button.content-switch {
+      transform: translate3d(38vw, 30%, 0); } }
   .show-content .current button.content-switch::before {
     content: 'X';
     top: 20px;
     font-family: arial;
     animation: none; }
+  @media screen and (max-width: 690px) {
+    .show-content .current button.content-switch {
+      transform: translate3d(36vw, 30%, 0);
+      width: 40px;
+      height: 40px;
+      font-size: 11px; }
+      .show-content .current button.content-switch::before {
+        top: 12px; } }
 
 /* Content */
 .js .pages {
@@ -368,7 +393,7 @@ button.content-switch::before {
 .pages .content {
   background: rgba(40, 49, 56, 0.95);
   text-align: center;
-  color: #dedede;
+  color: #fff;
   font-size: 1.5em; }
 
 .js .pages .content {
@@ -400,7 +425,7 @@ button.content-switch::before {
 .pages .content h2 {
   font-size: 3em;
   max-width: 70%;
-  color: #dedede;
+  color: #fff;
   padding: 13px 0 0;
   text-align: left;
   margin-left: 45px; }
@@ -449,7 +474,8 @@ button.content-switch::before {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   float: left;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 20px; }
 
 .pages .content.show p {
   -webkit-transition-duration: 1s;
@@ -462,6 +488,10 @@ button.content-switch::before {
   width: 100%;
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s; }
+  @media screen and (max-width: 850px) {
+    .pages .content.show p {
+      float: none;
+      max-width: 75%; } }
 
 .pages .content a {
   color: #3c89d5;
@@ -514,6 +544,9 @@ button.content-switch::before {
   margin: -40px 0 59px 0;
   background: url("../images/inde.png") center no-repeat;
   background-size: contain; }
+  @media screen and (max-width: 850px) {
+    .map {
+      display: none; } }
 
 /* Overlay-map style */
 #trigger-overlay {
@@ -1094,20 +1127,33 @@ a {
     overflow: hidden;
     width: 16.6666667%;
     /* Fallback */
-    width: -webkit-calc(97% / 5);
-    width: calc(97% / 5); }
+    width: -webkit-calc(100% / 5);
+    width: calc(100% / 5); }
     .cbp-rfgrid li:hover a:before {
       content: '';
-      width: 20%;
-      height: 20%;
-      background: url(../images/loupe.svg);
+      width: 25%;
+      height: 1px;
+      background-color: #fff;
       display: block;
       position: absolute;
       background-size: contain;
-      left: calc(50% - 10%);
-      top: calc(50% - 10%);
+      left: 35%;
+      top: 50%;
       cursor: pointer;
       z-index: 10; }
+    .cbp-rfgrid li:hover a:after {
+      content: '';
+      width: 25%;
+      height: 1px;
+      background-color: #fff;
+      display: block;
+      position: absolute;
+      background-size: contain;
+      left: 35%;
+      top: 50%;
+      cursor: pointer;
+      z-index: 10;
+      transform: rotate(90deg); }
     .cbp-rfgrid li a {
       display: block;
       width: 100%;
@@ -1158,8 +1204,8 @@ a {
   .cbp-rfgrid li {
     width: 20%;
     /* Fallback */
-    width: -webkit-calc(97% / 5);
-    width: calc(97% / 5); } }
+    width: -webkit-calc(100% / 5);
+    width: calc(100% / 5); } }
 
 @media screen and (max-width: 945px) {
   .cbp-rfgrid li {
@@ -1208,7 +1254,7 @@ a {
   top: calc(50% - 30%); }
   .current .prevnext img {
     display: block;
-    width: 45%;
+    width: 4vw;
     position: absolute; }
 
 .current .prev {

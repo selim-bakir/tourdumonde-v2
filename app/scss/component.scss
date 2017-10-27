@@ -189,9 +189,22 @@ button.slider-switch {
     -ms-user-select: none;
     user-select: none;
     vertical-align: top;
+    // overflow: hidden;
     &.coming-soon {
         background: repeating-linear-gradient( 45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
     }
+    // &:before{
+    //     display:block;
+    //     content:'';
+    //     width: 300px;
+    //     height: 300px;
+    //     background-color: red;
+    //     position: absolute;
+    //     transform: rotate(45deg);
+    //     left: -150px;
+    //     top: -150px;
+    //     overflow: hidden;
+    // }
 }
 
 .no-js .img-dragger .slide {
@@ -247,6 +260,20 @@ button.slider-switch {
         top: 50%;
         -webkit-transform: translate3d(0, -50%, 0);
         transform: translate3d(0, -50%, 0);
+
+    }
+    .img-dragger-large .slide.active h2 {
+        &:before{
+            content:'';
+            display:block;
+            width: 80px;
+            height: 80px;
+            background: url('/images/pin.svg') no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 20%;
+            left: 26%;
+        }
     }
 }
 
@@ -302,7 +329,7 @@ button.content-switch {
     position: absolute;
     cursor: pointer;
     top: 100%;
-    right: 4%;
+    left: calc(100vw - 50%);
     -webkit-transform: translate3d(-50%, -200%, 0);
     transform: translate3d(-50%, -200%, 0);
     line-height: 1;
@@ -362,12 +389,28 @@ button.content-switch {
     border-color: #fff;
     color: #fff;
     -webkit-transform: translate3d(52%, 30%, 0);
-    transform: translate3d(52%, 30%, 0);
+    transform: translate3d(42vw, 30%, 0);    
+    @media screen and (max-width: 1024px) {
+        transform: translate3d(40vw, 30%, 0);    
+    }
+    @media screen and (max-width: 850px) {
+        transform: translate3d(38vw, 30%, 0);    
+    }
+
     &::before {
         content: 'X';
         top: 20px;
         font-family: arial;
         animation: none;
+    }
+    @media screen and (max-width: 690px) {
+        transform: translate3d(36vw, 30%, 0); 
+        width: 40px;
+        height: 40px;
+        font-size: 11px;   
+        &::before {
+            top: 12px;
+        }
     }
 }
 
@@ -395,7 +438,7 @@ button.content-switch {
 .pages .content {
     background: rgba(40, 49, 56, 0.95);
     text-align: center;
-    color: #dedede;
+    color: #fff;
     font-size: 1.5em;
 }
 
@@ -433,7 +476,7 @@ button.content-switch {
     h2 {
         font-size: 3em;
         max-width: 70%;
-        color: #dedede;
+        color: #fff;
         padding: 13px 0 0;
         text-align: left;
         margin-left: 45px;
@@ -495,6 +538,7 @@ button.content-switch {
             transform: translate3d(0, 0, 0);
             float: left;
             width: 100%;
+            margin-bottom: 20px;
         }
         p {
             -webkit-transition-duration: 1s;
@@ -504,6 +548,10 @@ button.content-switch {
             -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
             float: left;
+            @media screen and (max-width: 850px) {
+                float:none;
+                max-width: 75%;
+            }
             width: 100%;
             -webkit-transition-delay: 0.1s;
             transition-delay: 0.1s;
@@ -578,4 +626,7 @@ button.content-switch {
     margin: -40px 0 59px 0;
     background: url("../images/inde.png") center no-repeat;
     background-size: contain;
+    @media screen and (max-width: 850px) {
+        display:none;
+    }
 }
