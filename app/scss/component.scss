@@ -192,6 +192,7 @@ button.slider-switch {
     // overflow: hidden;
     &.coming-soon {
         background: repeating-linear-gradient( 45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+        filter: grayscale(100%);
     }
     // &:before{
     //     display:block;
@@ -260,12 +261,11 @@ button.slider-switch {
         top: 50%;
         -webkit-transform: translate3d(0, -50%, 0);
         transform: translate3d(0, -50%, 0);
-
     }
     .img-dragger-large .slide.active h2 {
-        &:before{
-            content:'';
-            display:block;
+        &:before {
+            content: '';
+            display: block;
             width: 80px;
             height: 80px;
             background: url('/images/pin.svg') no-repeat;
@@ -389,14 +389,13 @@ button.content-switch {
     border-color: #fff;
     color: #fff;
     -webkit-transform: translate3d(52%, 30%, 0);
-    transform: translate3d(42vw, 30%, 0);    
+    transform: translate3d(42vw, 30%, 0);
     @media screen and (max-width: 1024px) {
-        transform: translate3d(40vw, 30%, 0);    
+        transform: translate3d(40vw, 30%, 0);
     }
     @media screen and (max-width: 850px) {
-        transform: translate3d(38vw, 30%, 0);    
+        transform: translate3d(38vw, 30%, 0);
     }
-
     &::before {
         content: 'X';
         top: 20px;
@@ -404,10 +403,10 @@ button.content-switch {
         animation: none;
     }
     @media screen and (max-width: 690px) {
-        transform: translate3d(36vw, 30%, 0); 
+        transform: translate3d(36vw, 30%, 0);
         width: 40px;
         height: 40px;
-        font-size: 11px;   
+        font-size: 11px;
         &::before {
             top: 12px;
         }
@@ -549,7 +548,7 @@ button.content-switch {
             transform: translate3d(0, 0, 0);
             float: left;
             @media screen and (max-width: 850px) {
-                float:none;
+                float: none;
                 max-width: 75%;
             }
             width: 100%;
@@ -627,6 +626,6 @@ button.content-switch {
     background: url("../images/inde.png") center no-repeat;
     background-size: contain;
     @media screen and (max-width: 850px) {
-        display:none;
+        display: none;
     }
 }

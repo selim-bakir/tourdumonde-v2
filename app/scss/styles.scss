@@ -83,6 +83,9 @@ a {
     letter-spacing: 1px;
     float: left;
     color: #fff;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .overlay {
@@ -290,7 +293,7 @@ a {
         width: -webkit-calc(100% / 5);
         width: calc(100% / 5);
         &:hover {
-            a{
+            a {
                 &:before {
                     content: '';
                     width: 25%;
@@ -432,59 +435,53 @@ a {
     }
 }
 
-
-
 //Prev/next 
-
-
 .prev,
 .next {
-    display:none;
+    display: none;
     img {
-        display:none;
+        display: none;
     }
 }
 
-.current{
+.current {
     .prevnext {
-        display:block;
+        display: block;
         width: 140px;
         height: 100px;
         position: absolute;
         top: calc(50% - 30%);
         img {
-            display:block;
+            display: block;
             width: 4vw;
-            position:absolute;
+            position: absolute;
         }
     }
-    .prev{
+    .prev {
         left: 5%;
-        img{
+        img {
             left: 5%;
         }
     }
-
-    .next{
+    .next {
         right: 5%;
-        img{
+        img {
             right: 5%;
         }
     }
 }
 
 .switch-min {
-    .current{
+    .current {
         .prevnext {
-            img{
+            img {
                 width: 35%;
-                position:absolute;
+                position: absolute;
             }
         }
         .prev img {
             left: 0;
         }
-
         .next img {
             right: 0;
         }

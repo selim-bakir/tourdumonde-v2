@@ -6,7 +6,7 @@
         header = document.getElementById('header'),
         switchBtnn = header.querySelector('button.slider-switch'),
         earthBtn = document.getElementById('trigger-overlay');
-        toggleBtnn = function() {
+    toggleBtnn = function() {
             if (slideshow.isFullscreen) {
                 classie.add(switchBtnn, 'view-maxi');
             } else {
@@ -89,7 +89,5 @@ $.ajax({
 
 $(document).ready(function() {
 
-
     $('.slide.coming-soon .content-switch').hide()
-
 });
