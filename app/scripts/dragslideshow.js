@@ -252,9 +252,6 @@
         }
     }
 
-
-    var PrevNext = slideshow.querySelector('.prevnext');
-
     /**
      * initialize the Dragdealer plugin
      */

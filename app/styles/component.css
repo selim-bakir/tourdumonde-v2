@@ -202,7 +202,6 @@ button.slider-switch:hover {
   user-select: none;
   vertical-align: top; }
   .img-dragger .slide.coming-soon {
-    background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
     filter: grayscale(100%); }
 
 .no-js .img-dragger .slide {
@@ -364,7 +363,7 @@ button.content-switch::before {
     content: 'X';
     top: 20px;
     font-family: arial;
-    animation: none; }
+    animation: none !important; }
   @media screen and (max-width: 690px) {
     .show-content .current button.content-switch {
       transform: translate3d(36vw, 30%, 0);
@@ -542,8 +541,10 @@ button.content-switch::before {
   width: 30%;
   min-height: 355px;
   margin: -40px 0 59px 0;
-  background: url("../images/inde.png") center no-repeat;
-  background-size: contain; }
+  background-size: contain !important; }
   @media screen and (max-width: 850px) {
     .map {
       display: none; } }
+
+.srilanka-map {
+  background: url("../images/maps/srilanka.svg") center no-repeat; }

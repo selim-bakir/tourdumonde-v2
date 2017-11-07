@@ -25,7 +25,6 @@
                 classie.remove(header, 'hide');
                 classie.remove(switchBtnn, 'hide');
                 classie.remove(earthBtn, 'hide');
-                classie.remove(PrevNext, 'hide');
             }
         },
         slideshow = new DragSlideshow(document.getElementById('slideshow'), {
@@ -59,7 +58,31 @@
 $('.switch-max .slide.current').click(function() {
     console.log('ici');
     $('.slide.current .content-switch').click();
+
+
+
+    function getComments() {
+        debugger;
+        var media_id = $(this).attr('data-id');
+        $.ajax({
+            url: 'https://api.instagram.com/v1/media/' + media_id + '/comments?access_token=' + token + '',
+            dataType: 'jsonp',
+            type: 'GET',
+
+            success: function(data) {
+                console.log('GetComments : ' + data.data);
+            },
+            error: function(data) {
+                console.log(data);
+            }
+        });
+    }
+
+
 });
+
+
+
 /********************* 
  *** INSTAGRAM API ***
  *********************/
@@ -79,7 +102,7 @@ $.ajax({
         for (x in data.data) {
             var image = data.data[x].images.standard_resolution.url,
                 imageLarge = image.replace(/s[0-9]+x[0-9]+\/(sh[0-9]+.[0-9]+\/)*/, "");
-            $('#' + data.data[x].tags[0]).append('<li><a rel="group" class="fancybox" data-fancybox="images-' + data.data[x].tags[0] + '" href="' + imageLarge + '" target="_blank"><img src="' + data.data[x].images.low_resolution.url + '"></a></li>');
+            $('#' + data.data[x].tags[0]).append('<li><a rel="group" class="fancybox" data-caption="' + data.data[x].caption.text + '" data-id="' + data.data[x].id + '" data-fancybox="images-' + data.data[x].tags[0] + '" href="' + imageLarge + '" target="_blank"><img src="' + data.data[x].images.low_resolution.url + '"></a></li>');
         }
     },
     error: function(data) {
@@ -87,7 +110,7 @@ $.ajax({
     }
 });
 
-$(document).ready(function() {
 
-    $('.slide.coming-soon .content-switch').hide()
+$(document).ready(function() {
+    $('.slide.coming-soon .content-switch').hide();
 });

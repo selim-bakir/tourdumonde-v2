@@ -12,6 +12,18 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./styles/main-index.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109287516-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-109287516-1');
+    </script>
 </head>
 
 <body>
@@ -24,7 +36,7 @@
         <button id="trigger-overlay" type="button">&nbsp;</button>
         <div id="overlay" class="overlay">
             <div class="info">
-                <h2>Comment ca marche ?!</h2>
+                <h2>Comment ca marche ?</h2>
                 <span class="info-drag">Avec ta souris ou ton index</span>
                 <span class="info-keys">Le clavier</span>
                 <span class="info-switch">Changer de vue</span>
@@ -46,12 +58,11 @@
                     <div class="slide" data-content="content-1">
                         <div class="img-wrap">
                             <span>
-                                <span class="corner">&nbsp;</span>
                             <img src="./images/covers/1.jpg" alt="Sri lanka cover" />
                             </span>
                         </div>
                         <h2>
-                            Sri Lanka<span>Du 8 novembre au 24 octobre 2017</span>
+                            Sri Lanka<span>Depuis le 8 novembre 2017</span>
                             <span class="next prevnext"><img src="/images/next.svg" alt="suivant"  title="Suivant" /></span>
                         </h2>
                         <button class="content-switch">Voir</button>
@@ -100,15 +111,13 @@
             <!-- START CONTENT SECTION -->
 
             <section class="pages">
-                <!--<span class="btn-nav left">Precedent</span>     
-          <span class="btn-nav right">Suivant</span>  -->
                 <!-- Sri Lanka content -->
                 <div class="content" data-content="content-1">
                     <h2>Sri Lanka <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod. Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla diam non elit congue, et
                         porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer scelerisque elementum lacus nec mattis. Cras sed scelerisque
                         turpis. In non elit sit amet diam ultricies tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
-                    <div class="map"></div>
+                    <div class="map srilanka-map"></div>
                     <div id="instafeed">
                         <ul id="srilanka" class="cbp-rfgrid"></ul>
                     </div>
@@ -161,8 +170,6 @@
     <script src="./scripts/jquery.fancybox.min.js"></script>
     <script src="./scripts/overlay.js"></script>
     <script src="./scripts/main-index.js"></script>
-    <script>
-    </script>
 </body>
 
 </html>
