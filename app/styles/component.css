@@ -110,6 +110,9 @@ html.js {
   font-family: 'lobster', sans-serif;
   font-weight: 300;
   padding-top: 0.5em; }
+  @media only screen and (max-width: 680px) {
+    .dragslider h2 span {
+      font-size: 35%; } }
 
 /* Switch button */
 button.slider-switch {
@@ -435,24 +438,38 @@ button.content-switch::before {
 .pages .content h2 span {
   color: #95a5a6; }
 
-.pages .content p {
-  max-width: 60%;
-  margin: 0 auto;
-  padding: 0.5em 0;
-  line-height: 1.5;
+.pages .content .description {
+  display: block;
+  width: 68%;
+  float: left;
+  font-size: 18px !important;
+  margin-bottom: 25px;
   text-align: justify;
-  font-family: 'Segoe UI', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
-  font-weight: 100;
-  margin-left: 45px;
-  line-height: 1.2em; }
-  .pages .content p:last-child {
-    padding: 5em 1em 8em;
-    text-align: center;
-    font-weight: bold;
-    display: none; }
-  @media only screen and (min-width: 681px) and (max-width: 1024px) {
-    .pages .content p {
-      text-align: left; } }
+  padding-left: 44px; }
+  @media only screen and (max-width: 680px) {
+    .pages .content .description {
+      width: 100%; } }
+  @media screen and (max-width: 850px) {
+    .pages .content .description {
+      width: 100%; } }
+  .pages .content .description p {
+    max-width: 100%;
+    padding: 0.5em 0;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: 'Segoe UI', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+    font-weight: 100;
+    line-height: 1.2em;
+    text-align: justify;
+    margin: 0; }
+    .pages .content .description p:last-child {
+      font-weight: bold; }
+      @media only screen and (max-width: 680px) {
+        .pages .content .description p:last-child {
+          margin-bottom: 25px; } }
+    @media only screen and (max-width: 680px) {
+      .pages .content .description p {
+        font-size: 15px; } }
 
 .js .pages .content h2,
 .js .pages .content p {
@@ -490,7 +507,7 @@ button.content-switch::before {
   @media screen and (max-width: 850px) {
     .pages .content.show p {
       float: none;
-      max-width: 75%; } }
+      max-width: 85%; } }
 
 .pages .content a {
   color: #3c89d5;
@@ -540,7 +557,7 @@ button.content-switch::before {
   float: left;
   width: 30%;
   min-height: 355px;
-  margin: -40px 0 59px 0;
+  margin: 0 0 0 10px;
   background-size: contain !important; }
   @media screen and (max-width: 850px) {
     .map {
@@ -548,3 +565,6 @@ button.content-switch::before {
 
 .srilanka-map {
   background: url("../images/maps/srilanka.svg") center no-repeat; }
+
+#instafeed {
+  clear: both; }

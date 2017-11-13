@@ -301,7 +301,8 @@ a {
       cursor: pointer; }
       .cbp-rfgrid li a img {
         display: block;
-        width: 100%;
+        width: auto;
+        height: auto;
         cursor: pointer;
         max-width: 100%; }
     .cbp-rfgrid li img {

@@ -329,7 +329,8 @@ a {
             cursor: pointer;
             img {
                 display: block;
-                width: 100%;
+                width: auto;
+                height: auto;
                 cursor: pointer;
                 max-width: 100%;
             }
@@ -487,3 +488,5 @@ a {
         }
     }
 }
+
+

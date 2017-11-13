@@ -87,8 +87,8 @@ $('.switch-max .slide.current').click(function() {
  *** INSTAGRAM API ***
  *********************/
 
-var token = '5848647513.1677ed0.fe48758d8b7e489392819649b4a4d234', // learn how to obtain it below
-    userid = 5848647513, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
+var token = '1352546675.1677ed0.1f0a0dcb1ef84a7b8e9ea9c46882a524', // learn how to obtain it below
+    userid = 1352546675, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
     num_photos = 99999; // how much photos do you want to get
 
 $.ajax({
@@ -100,9 +100,18 @@ $.ajax({
     success: function(data) {
         console.log(data.data);
         for (x in data.data) {
-            var image = data.data[x].images.standard_resolution.url,
-                imageLarge = image.replace(/s[0-9]+x[0-9]+\/(sh[0-9]+.[0-9]+\/)*/, "");
-            $('#' + data.data[x].tags[0]).append('<li><a rel="group" class="fancybox" data-caption="' + data.data[x].caption.text + '" data-id="' + data.data[x].id + '" data-fancybox="images-' + data.data[x].tags[0] + '" href="' + imageLarge + '" target="_blank"><img src="' + data.data[x].images.low_resolution.url + '"></a></li>');
+            if(data.data[x].type != 'video'){
+                var image = data.data[x].images.standard_resolution.url,
+                    imageLarge = image.replace(/s[0-9]+x[0-9]+\/(sh[0-9]+.[0-9]+\/)*/, "");
+                $('#' + data.data[x].tags[0]).append('<li><a rel="group" class="fancybox" data-caption="' + data.data[x].caption.text + '" data-id="' + data.data[x].id + '" data-fancybox="images-' + data.data[x].tags[0] + '" href="' + imageLarge + '" target="_blank"><img src="' + data.data[x].images.low_resolution.url + '"></a></li>');
+            }
+            // else{
+            //     var url_video = data.data[x].link,
+            //         fancyUrl = url_video.substr(27);
+            //         console.log('fancyUrl : ' +fancyUrl);
+
+            //     $('#' + data.data[x].tags[0]).append('<li><a rel="group" class="fancybox" data-type="video" data-caption="' + data.data[x].caption.text + '" data-id="' + data.data[x].id + '" data-fancybox="' + data.data[x].link + '" href="http://instagr.am/p' + fancyUrl + '" target="_blank"><img src="' + data.data[x].images.low_resolution.url + '"></a></li>');
+            // }
         }
     },
     error: function(data) {

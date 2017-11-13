@@ -81,6 +81,9 @@ html.js {
     font-family: 'lobster', sans-serif;
     font-weight: 300;
     padding-top: 0.5em;
+    @include grid-media-query(palm) {
+        font-size: 35%;
+    }
 }
 
 
@@ -479,6 +482,7 @@ button.content-switch {
         padding: 13px 0 0;
         text-align: left;
         margin-left: 45px;
+
     }
 }
 
@@ -490,26 +494,42 @@ button.content-switch {
     h2 span {
         color: #95a5a6;
     }
+    .description{
+        display: block;
+        width: 68%;
+        float:left;
+        font-size:18px !important;
+        margin-bottom: 25px;
+        text-align: justify;
+        padding-left: 44px;
+        @include grid-media-query(palm) {
+            width: 100%;
+        }
+        @media screen and (max-width: 850px){
+            width: 100%;
+        }
+        
     p {
-        max-width: 60%;
-        margin: 0 auto;
+        max-width: 100%;
         padding: 0.5em 0;
         line-height: 1.5;
         text-align: justify;
         font-family: 'Segoe UI', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
         font-weight: 100;
-        margin-left: 45px;
         line-height: 1.2em;
+        text-align: justify;
+        margin: 0;
         &:last-child {
-            padding: 5em 1em 8em;
-            text-align: center;
             font-weight: bold;
-            display: none;
+            @include grid-media-query(palm) {
+                margin-bottom: 25px;
+            }
         }
-        @include grid-media-query(lap) {
-            text-align: left;
+        @include grid-media-query(palm) {
+            font-size: 15px;
         }
     }
+}
 }
 
 .js .pages .content {
@@ -549,7 +569,7 @@ button.content-switch {
             float: left;
             @media screen and (max-width: 850px) {
                 float: none;
-                max-width: 75%;
+                max-width: 85%;
             }
             width: 100%;
             -webkit-transition-delay: 0.1s;
@@ -622,7 +642,7 @@ button.content-switch {
     float: left;
     width: 30%;
     min-height: 355px;
-    margin: -40px 0 59px 0;
+    margin: 0 0 0 10px;
     background-size: contain !important;
     @media screen and (max-width: 850px) {
         display: none;
@@ -632,3 +652,8 @@ button.content-switch {
 .srilanka-map {
     background: url("../images/maps/srilanka.svg") center no-repeat;
 }
+
+#instafeed{
+    clear: both;
+}
+
