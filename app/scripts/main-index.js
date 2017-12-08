@@ -1,26 +1,26 @@
-(function() {
+(function () {
     var overlay = document.getElementById('overlay'),
         htmlTag = document.querySelector('html'),
         slideshow = document.getElementById('slideshow'),
-        overlayClose = overlay.querySelector('button'),
+        // overlayClose = overlay.querySelector('button'),
         header = document.getElementById('header'),
         switchBtnn = header.querySelector('button.slider-switch'),
         earthBtn = document.getElementById('trigger-overlay');
-    toggleBtnn = function() {
+    toggleBtnn = function () {
             if (slideshow.isFullscreen) {
                 classie.add(switchBtnn, 'view-maxi');
             } else {
                 classie.remove(switchBtnn, 'view-maxi');
             }
         },
-        toggleCtrls = function() {
+        toggleCtrls = function () {
             if (!slideshow.isContent) {
                 classie.add(header, 'hide');
                 classie.add(switchBtnn, 'hide');
                 classie.add(earthBtn, 'hide');
             }
         },
-        toggleCompleteCtrls = function() {
+        toggleCompleteCtrls = function () {
             if (!slideshow.isContent) {
                 classie.remove(header, 'hide');
                 classie.remove(switchBtnn, 'hide');
@@ -35,91 +35,72 @@
             // toggle the main image and the content view (triggered after the animation ends)
             onToggleContentComplete: toggleCompleteCtrls
         }),
-        toggleSlideshow = function() {
+        toggleSlideshow = function () {
             slideshow.toggle();
             console.log('toggleSlideshow');
             toggleBtnn();
         },
-        closeOverlay = function() {
+        closeOverlay = function () {
             classie.add(overlay, 'hide');
-            if ($(window).width() > 960) {
-                $('.slider-switch').click();
-            }
         };
 
     // toggle between fullscreen and small slideshow
     switchBtnn.addEventListener('click', toggleSlideshow);
     // close overlay
-    overlayClose.addEventListener('click', closeOverlay);
+    // overlayClose.addEventListener('click', closeOverlay);
 
 
 }());
 
-$('.switch-max .slide.current').click(function() {
-    console.log('ici');
-    $('.slide.current .content-switch').click();
-
-
-
-    function getComments() {
-        debugger;
-        var media_id = $(this).attr('data-id');
-        $.ajax({
-            url: 'https://api.instagram.com/v1/media/' + media_id + '/comments?access_token=' + token + '',
-            dataType: 'jsonp',
-            type: 'GET',
-
-            success: function(data) {
-                console.log('GetComments : ' + data.data);
-            },
-            error: function(data) {
-                console.log(data);
-            }
-        });
-    }
-
-
-});
+// $('.switch-max .slide.current').click(function () {
+//     $('.slide.current .content-switch').click();
+// });
 
 
 
 /********************* 
- *** INSTAGRAM API ***
- *********************/
+ *** FLICKR API ***
+//  *********************/
 
-var token = '1352546675.1677ed0.1f0a0dcb1ef84a7b8e9ea9c46882a524', // learn how to obtain it below
-    userid = 1352546675, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
-    num_photos = 99999; // how much photos do you want to get
+function getPhotoFlickr(id, country) {
 
-$.ajax({
-    url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent',
-    dataType: 'jsonp',
-    type: 'GET',
-    data: { access_token: token, count: num_photos },
-
-    success: function(data) {
-        console.log(data.data);
-        for (x in data.data) {
-            if(data.data[x].type != 'video'){
-                var image = data.data[x].images.standard_resolution.url,
-                    imageLarge = image.replace(/s[0-9]+x[0-9]+\/(sh[0-9]+.[0-9]+\/)*/, "");
-                $('#' + data.data[x].tags[0]).append('<li><a rel="group" class="fancybox" data-caption="' + data.data[x].caption.text + '" data-id="' + data.data[x].id + '" data-fancybox="images-' + data.data[x].tags[0] + '" href="' + imageLarge + '" target="_blank"><img src="' + data.data[x].images.low_resolution.url + '"></a></li>');
-            }
-            // else{
-            //     var url_video = data.data[x].link,
-            //         fancyUrl = url_video.substr(27);
-            //         console.log('fancyUrl : ' +fancyUrl);
-
-            //     $('#' + data.data[x].tags[0]).append('<li><a rel="group" class="fancybox" data-type="video" data-caption="' + data.data[x].caption.text + '" data-id="' + data.data[x].id + '" data-fancybox="' + data.data[x].link + '" href="http://instagr.am/p' + fancyUrl + '" target="_blank"><img src="' + data.data[x].images.low_resolution.url + '"></a></li>');
-            // }
-        }
-    },
-    error: function(data) {
-        console.log(data);
+    if ($("#" + country + "").is(':empty')) {
+        $.ajax({
+            url: 'https://api.flickr.com/services/rest/',
+            data: {
+                format: 'json',
+                method: 'flickr.photosets.getPhotos',
+                api_key: 'a95ff5e1ffae68765c52261e18500a33',
+                photoset_id: id,
+            },
+            dataType: 'jsonp',
+            jsonp: 'jsoncallback'
+        }).done(function (data) {
+            // console.log(data);
+            var gallery = $("#" + country + ""),
+                url;
+            // console.log('Galerie : '+gallery);
+            $.each(data.photoset.photo, function (index, photo) {
+                url = 'http://farm' + photo.farm + '.static.flickr.com/' +
+                    photo.server + '/' + photo.id + '_' + photo.secret;
+                gallery
+                    .append('<li><a rel="group" class="fancybox" data-caption="' + photo.title + '" data-fancybox="images" href="' + url + '_b.jpg' + '" target="_blank"><img src="' + url + '_m.jpg' + '"></a></li>');
+            });
+        });
+    } else {
+        return;
     }
-});
+};
 
+$('.showPhotos').click(function () {
+    var id = $(this).attr('data-album'),
+        country = $(this).attr('data-country');
+    getPhotoFlickr(id, country);
+})
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('.slide.coming-soon .content-switch').hide();
+    if ($(window).width() > 960) {
+        $('.slider-switch').click();
+    }
 });

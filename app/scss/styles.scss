@@ -258,8 +258,8 @@ a {
     float: left;
     margin-bottom: 10px;
     img {
-        max-width: 100%;
-        max-height: 100%;
+        max-width: 18vw;
+        max-height: 18vw ;
         vertical-align: bottom;
     }
 }
@@ -284,14 +284,17 @@ a {
     list-style: none;
     position: relative;
     width: 94%;
+    @media screen and (max-width: 400px) {
+        width: 91%;
+    }
     li {
         position: relative;
         float: left;
         overflow: hidden;
-        width: 16.6666667%;
-        /* Fallback */
-        width: -webkit-calc(100% / 5);
-        width: calc(100% / 5);
+        // width: 16.6666667%;
+        // /* Fallback */
+        // width: -webkit-calc(100% / 5);
+        // width: calc(100% / 5);
         &:hover {
             a {
                 &:before {
@@ -329,10 +332,30 @@ a {
             cursor: pointer;
             img {
                 display: block;
-                width: auto;
-                height: auto;
+                width: 18vw;
+                height: 18vw;
                 cursor: pointer;
                 max-width: 100%;
+
+                @media screen and (max-width: 945px) {
+                    width: 30vw;
+                    height: 30vw;
+                }
+
+                @media screen and (max-width: 660px) {
+                    width: 30vw;
+                    height: 30vw;
+                }
+
+                @media screen and (max-width: 400px) {
+                    width: 43vw;
+                    height: 43vw;
+                }
+
+                @media screen and (max-width: 300px) {
+                    width: 30vw;
+                    height: 30vw;
+                }
             }
         }
         img {
@@ -382,59 +405,6 @@ a {
 
 /* Flexbox is used for centering the heading */
 
-
-/* Example for media query: change number of items per row */
-
-@media screen and (max-width: 1190px) {
-    .cbp-rfgrid li {
-        width: 20%;
-        /* Fallback */
-        width: -webkit-calc(100% / 5);
-        width: calc(100% / 5);
-    }
-}
-
-@media screen and (max-width: 945px) {
-    .cbp-rfgrid li {
-        width: 25%;
-        /* Fallback */
-        width: -webkit-calc(100% / 4);
-        width: calc(100% / 4);
-    }
-}
-
-@media screen and (max-width: 660px) {
-    .cbp-rfgrid li {
-        width: 33.3333333%;
-        /* Fallback */
-        width: -webkit-calc(100% / 3);
-        width: calc(100% / 3);
-    }
-}
-
-@media screen and (max-width: 660px) {
-    .cbp-rfgrid li {
-        width: 33.3333333%;
-        /* Fallback */
-        width: -webkit-calc(100% / 3);
-        width: calc(100% / 3);
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .cbp-rfgrid li {
-        width: 50%;
-        /* Fallback */
-        width: -webkit-calc(100% / 2);
-        width: calc(100% / 2);
-    }
-}
-
-@media screen and (max-width: 300px) {
-    .cbp-rfgrid li {
-        width: 100%;
-    }
-}
 
 //Prev/next 
 .prev,

@@ -1,8 +1,10 @@
 (function() {
 	var container = document.querySelector( 'div.container' ),
 		triggerBttn = document.getElementById( 'trigger-overlay' ),
+		seeMore = document.querySelector('span.see-more'),
+		closeseeMore = document.querySelector('button.close-see-more'),
 		overlay = document.querySelector( 'div.overlay-map' ),
-		closeBttn = overlay.querySelector( 'button.overlay-map-close' );
+		closeMap = overlay.querySelector( 'button.overlay-map-close' );
 		transEndEventNames = {
 			'WebkitTransition': 'webkitTransitionEnd',
 			'MozTransition': 'transitionend',
@@ -39,5 +41,7 @@
 	}
 
 	triggerBttn.addEventListener( 'click', toggleOverlay );
-	closeBttn.addEventListener( 'click', toggleOverlay );
+	closeMap.addEventListener( 'click', toggleOverlay );
+	// seeMore.addEventListener( 'click', toggleOverlay );
+	// closeseeMore.addEventListener( 'click', toggleOverlay );
 })();

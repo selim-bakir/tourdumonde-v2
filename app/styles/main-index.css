@@ -19,6 +19,12 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'ralewaylight';
+  src: url("../fonts/raleway-light-webfont.woff2") format("woff2"), url("../fonts/raleway-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /**
  * Media query mixin.
  *
@@ -443,8 +449,8 @@ button.content-switch::before {
   display: block;
   width: 68%;
   float: left;
-  font-size: 18px !important;
-  margin-bottom: 25px;
+  font-size: 15px !important;
+  margin-bottom: 70px;
   text-align: justify;
   padding-left: 44px; }
   @media only screen and (max-width: 680px) {
@@ -458,7 +464,7 @@ button.content-switch::before {
     padding: 0.5em 0;
     line-height: 1.5;
     text-align: justify;
-    font-family: 'Segoe UI', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+    font-family: 'ralewaylight';
     font-weight: 100;
     line-height: 1.2em;
     text-align: justify;
@@ -557,8 +563,8 @@ button.content-switch::before {
 .map {
   float: left;
   width: 30%;
-  min-height: 355px;
-  margin: 0 0 0 10px;
+  min-height: 315px;
+  margin: 0 0 35px 10px;
   background-size: contain !important; }
   @media screen and (max-width: 850px) {
     .map {
@@ -566,6 +572,9 @@ button.content-switch::before {
 
 .srilanka-map {
   background: url("../images/maps/srilanka.svg") center no-repeat; }
+
+.inde-map {
+  background: url("../images/maps/inde.svg") center no-repeat; }
 
 #instafeed {
   clear: both; }
@@ -1126,8 +1135,8 @@ a {
   float: left;
   margin-bottom: 10px; }
   .item img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 18vw;
+    max-height: 18vw;
     vertical-align: bottom; }
 
 .first-item {
@@ -1145,14 +1154,13 @@ a {
   list-style: none;
   position: relative;
   width: 94%; }
+  @media screen and (max-width: 400px) {
+    .cbp-rfgrid {
+      width: 91%; } }
   .cbp-rfgrid li {
     position: relative;
     float: left;
-    overflow: hidden;
-    width: 16.6666667%;
-    /* Fallback */
-    width: -webkit-calc(100% / 5);
-    width: calc(100% / 5); }
+    overflow: hidden; }
     .cbp-rfgrid li:hover a:before {
       content: '';
       width: 25%;
@@ -1184,10 +1192,26 @@ a {
       cursor: pointer; }
       .cbp-rfgrid li a img {
         display: block;
-        width: auto;
-        height: auto;
+        width: 18vw;
+        height: 18vw;
         cursor: pointer;
         max-width: 100%; }
+        @media screen and (max-width: 945px) {
+          .cbp-rfgrid li a img {
+            width: 30vw;
+            height: 30vw; } }
+        @media screen and (max-width: 660px) {
+          .cbp-rfgrid li a img {
+            width: 30vw;
+            height: 30vw; } }
+        @media screen and (max-width: 400px) {
+          .cbp-rfgrid li a img {
+            width: 43vw;
+            height: 43vw; } }
+        @media screen and (max-width: 300px) {
+          .cbp-rfgrid li a img {
+            width: 30vw;
+            height: 30vw; } }
     .cbp-rfgrid li img {
       -webkit-transform: scale(1);
       transform: scale(1);
@@ -1224,46 +1248,6 @@ a {
       padding: 0 10px; }
 
 /* Flexbox is used for centering the heading */
-/* Example for media query: change number of items per row */
-@media screen and (max-width: 1190px) {
-  .cbp-rfgrid li {
-    width: 20%;
-    /* Fallback */
-    width: -webkit-calc(100% / 5);
-    width: calc(100% / 5); } }
-
-@media screen and (max-width: 945px) {
-  .cbp-rfgrid li {
-    width: 25%;
-    /* Fallback */
-    width: -webkit-calc(100% / 4);
-    width: calc(100% / 4); } }
-
-@media screen and (max-width: 660px) {
-  .cbp-rfgrid li {
-    width: 33.3333333%;
-    /* Fallback */
-    width: -webkit-calc(100% / 3);
-    width: calc(100% / 3); } }
-
-@media screen and (max-width: 660px) {
-  .cbp-rfgrid li {
-    width: 33.3333333%;
-    /* Fallback */
-    width: -webkit-calc(100% / 3);
-    width: calc(100% / 3); } }
-
-@media screen and (max-width: 400px) {
-  .cbp-rfgrid li {
-    width: 50%;
-    /* Fallback */
-    width: -webkit-calc(100% / 2);
-    width: calc(100% / 2); } }
-
-@media screen and (max-width: 300px) {
-  .cbp-rfgrid li {
-    width: 100%; } }
-
 .prev,
 .next {
   display: none; }

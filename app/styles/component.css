@@ -18,6 +18,12 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'ralewaylight';
+  src: url("../fonts/raleway-light-webfont.woff2") format("woff2"), url("../fonts/raleway-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /**
  * Media query mixin.
  *
@@ -442,8 +448,8 @@ button.content-switch::before {
   display: block;
   width: 68%;
   float: left;
-  font-size: 18px !important;
-  margin-bottom: 25px;
+  font-size: 15px !important;
+  margin-bottom: 70px;
   text-align: justify;
   padding-left: 44px; }
   @media only screen and (max-width: 680px) {
@@ -457,7 +463,7 @@ button.content-switch::before {
     padding: 0.5em 0;
     line-height: 1.5;
     text-align: justify;
-    font-family: 'Segoe UI', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+    font-family: 'ralewaylight';
     font-weight: 100;
     line-height: 1.2em;
     text-align: justify;
@@ -556,8 +562,8 @@ button.content-switch::before {
 .map {
   float: left;
   width: 30%;
-  min-height: 355px;
-  margin: 0 0 0 10px;
+  min-height: 315px;
+  margin: 0 0 35px 10px;
   background-size: contain !important; }
   @media screen and (max-width: 850px) {
     .map {
@@ -565,6 +571,9 @@ button.content-switch::before {
 
 .srilanka-map {
   background: url("../images/maps/srilanka.svg") center no-repeat; }
+
+.inde-map {
+  background: url("../images/maps/inde.svg") center no-repeat; }
 
 #instafeed {
   clear: both; }

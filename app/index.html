@@ -34,7 +34,7 @@
             <button class="slider-switch">Switch view</button>
         </header>
         <button id="trigger-overlay" type="button">&nbsp;</button>
-        <div id="overlay" class="overlay">
+        <!-- <div id="overlay" class="overlay">
             <div class="info">
                 <h2>Comment ca marche ?</h2>
                 <span class="info-drag">Avec ta souris ou ton index</span>
@@ -43,7 +43,7 @@
                 <span class="info-world">Itinéraire</span>
                 <button>C'est parti !</button>
             </div>
-        </div>
+        </div> -->
         <div class="overlay-map overlay-map-contentpush">
             <div>
                 <h2>Itinéraire du voyage</h2>
@@ -62,20 +62,20 @@
                             </span>
                         </div>
                         <h2>
-                            Sri Lanka<span>Depuis le 8 novembre 2017</span>
+                            Sri Lanka<span>Du 8 au 25 novembre 2017</span>
                             <span class="next prevnext"><img src="/images/next.svg" alt="suivant"  title="Suivant" /></span>
                         </h2>
-                        <button class="content-switch">Voir</button>
+                        <button class="content-switch showPhotos" data-country="srilanka" data-album="72157690952933476">Voir</button>
                     </div>
                     <!-- Pays n°2 - Inde Cover -->
-                    <div class="slide coming-soon" data-content="content-2">
+                    <div class="slide" data-content="content-2">
                         <div class="img-wrap"><img src="./images/covers/2.jpg" alt="Inde cover" /></div>
                         <h2>
-                            Inde<span>Coming soon...</span>
+                            Inde<span>Depuis le 25 novembre 2017</span>
                             <span class="prev prevnext"><img src="/images/prev.svg" alt="precedent" title="Précédent" /></span>
                             <span class="next prevnext"><img src="/images/next.svg" alt="suivant"  title="Suivant" /></span>
                         </h2>
-                        <button class="content-switch">Voir</button>
+                        <button class="content-switch showPhotos" data-country="inde" data-album="72157663230102628">Voir</button>
                     </div>
                     <!-- Pays n°3 - Birmanie Cover -->
                     <div class="slide coming-soon" data-content="content-3">
@@ -84,7 +84,7 @@
                             <span class="prev prevnext"><img src="/images/prev.svg" alt="precedent" title="Précédent" /></span>
                             <span class="next prevnext"><img src="/images/next.svg" alt="suivant"  title="Suivant" /></span>
                         </h2>
-                        <button class="content-switch">Voir</button>
+                        <button class="content-switch showPhotos" data-country="birmanie" data-album="72157690951875816">Voir</button>
                     </div>
                     <!-- Pays n°4 - Laos Cover -->
                     <div class="slide coming-soon" data-content="content-4">
@@ -94,7 +94,7 @@
                             <span class="prev prevnext"><img src="/images/prev.svg" alt="precedent" title="Précédent" /></span>
                             <span class="next prevnext"><img src="/images/next.svg" alt="suivant"  title="Suivant" /></span>
                         </h2>
-                        <button class="content-switch">Voir</button>
+                        <button class="content-switch showPhotos" data-country="laos" data-album="72157690951875816">Voir</button>
                     </div>
                     <!-- Pays n°5 - Vietnam Cover -->
                     <div class="slide coming-soon" data-content="content-5">
@@ -103,9 +103,8 @@
                             Vietnam<span>Coming soon...</span>
                             <span class="prev prevnext"><img src="/images/prev.svg" alt="precedent" title="Précédent" /></span>
                         </h2>
-                        <button class="content-switch">Voir</button>
+                        <button class="content-switch showPhotos" data-country="vietnam" data-album="72157690951875816">Voir</button>
                     </div>
-
                 </div>
             </section>
             <!-- START CONTENT SECTION -->
@@ -115,7 +114,7 @@
                 <div class="content" data-content="content-1">
                     <h2>
                         Sri Lanka
-                        <span>Depuis le 8 novembre 2017</span>
+                        <span>Du 8 au 25 novembre 2017</span>
                     </h2>
                     <div class="description">
                         <p>
@@ -144,23 +143,33 @@
                         <p>
                         Les Sri Lankais sont réellement sympathiques et PEACE, ont l'échange facile et sont toujours prêts à nous renseigner. 
                     </p>
-                        <p>TRAVEL IN PROGRESS...</p>
+                        <!-- <span class="see-more">Voir +</span> -->
                     </div>
                     <div class="map srilanka-map"></div>
                     <div id="instafeed">
                         <ul id="srilanka" class="cbp-rfgrid"></ul>
                     </div>
+                    <!-- <div class="overlay-desc-srilanka overlay-desc-srilanka-contentpush">
+                        <div>
+                            <h2>Description du séjour</h2>
+                            <button type="button" class="overlay-map-close">Close</button>
+                        </div>
+        
+                    </div> -->
                 </div>
                 <!-- Inde content -->
                 <div class="content" data-content="content-2">
-                    <h2>Inde<span>2 mois / 60 jours / 1440 heures / 86 400 minutes / 5 184 000 secondes</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod.
-                        Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla
-                        diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus
-                        enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer
-                        scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies
-                        tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
-                    <div class="map"></div>
+                    <h2>Inde<span>Depuis le 25 novembre 2017</span></h2>
+                    <!-- <div class="description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum velit sit amet sapien maximus euismod.
+                            Maecenas laoreet lacinia fermentum. Fusce facilisis sodales purus ac efficitur. Mauris fringilla
+                            diam non elit congue, et porttitor metus pulvinar. Donec ullamcorper, nisi vel euismod gravida, risus
+                            enim maximus quam, bibendum sagittis diam mauris molestie nulla. Sed sed volutpat dolor. Integer
+                            scelerisque elementum lacus nec mattis. Cras sed scelerisque turpis. In non elit sit amet diam ultricies
+                            tristique at id risus. Fusce hendrerit interdum est at mattis. Nunc eu odio nibh.</p>
+                    </div>
+
+                    <div class="map inde-map"></div> -->
                     <div id="instafeed">
                         <ul id="inde" class="cbp-rfgrid"></ul>
                     </div>
@@ -203,14 +212,22 @@
             <!-- END CONTENT SECTION -->
         </div>
     </div>
+    
     <script src="./scripts/modernizr.custom.js"></script>
     <script src="./scripts/jquery-3.2.1.min.js"></script>
+    <!-- <script src="./scripts/jquery.mobile-1.4.5.min.js"></script> -->
     <script src="./scripts/dragdealer.js"></script>
     <script src="./scripts/classie.js"></script>
     <script src="./scripts/dragslideshow.js"></script>
     <script src="./scripts/jquery.fancybox.min.js"></script>
     <script src="./scripts/overlay.js"></script>
+    <!-- <script src="./scripts/instafetch.js"></script> -->
     <script src="./scripts/main-index.js"></script>
+    <!-- <script>
+    $(document).on("mobileinit",function() {
+        $.support.cors = true;
+        alert('CORS TRUE');
+    });  </script> -->
 </body>
 
 </html>
