@@ -1,3 +1,27 @@
+// adds mobile class, and mobile os to html tag
+jQuery(document).ready(function($){
+    var deviceAgent = navigator.userAgent.toLowerCase();
+    
+    if (deviceAgent.match(/(ipad)/)) {
+      $('html').addClass('ipad');
+    }
+    
+    if (deviceAgent.match(/android/)) {
+      $('html').addClass('android');
+      $('html').addClass('mobile');
+    }
+    
+    if (deviceAgent.match(/blackberry/)) {
+      $('html').addClass('blackberry');
+      $('html').addClass('mobile');
+    }
+    
+    if (deviceAgent.match(/(symbianos|^sonyericsson|^nokia|^samsung|^lg)/)) {
+      $('html').addClass('mobile');
+    }
+    
+  });
+
 (function () {
     var overlay = document.getElementById('overlay'),
         htmlTag = document.querySelector('html'),
@@ -76,7 +100,7 @@ function getPhotoFlickr(id, country) {
             dataType: 'jsonp',
             jsonp: 'jsoncallback'
         }).done(function (data) {
-            // console.log(data);
+            console.log(data);
             var gallery = $("#" + country + ""),
                 url;
             // console.log('Galerie : '+gallery);
@@ -92,6 +116,7 @@ function getPhotoFlickr(id, country) {
     }
 };
 
+//au click sur la flêche "voir plus - API CALL"
 $('.showPhotos').click(function () {
     var id = $(this).attr('data-album'),
         country = $(this).attr('data-country');
@@ -103,4 +128,8 @@ $(document).ready(function () {
     if ($(window).width() > 960) {
         $('.slider-switch').click();
     }
+    setTimeout(function(){
+        $('.slide[data-content="content-1"] .next').click()
+    }, 1000);
+    
 });

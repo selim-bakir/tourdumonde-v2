@@ -4,7 +4,7 @@
 		seeMore = document.querySelector('span.see-more'),
 		closeseeMore = document.querySelector('button.close-see-more'),
 		overlay = document.querySelector( 'div.overlay-map' ),
-		closeMap = overlay.querySelector( 'button.overlay-map-close' );
+		closeMap = overlay.querySelector( 'div.close-map' );
 		transEndEventNames = {
 			'WebkitTransition': 'webkitTransitionEnd',
 			'MozTransition': 'transitionend',
@@ -16,6 +16,7 @@
 		support = { transitions : Modernizr.csstransitions };
 
 	function toggleOverlay() {
+		console.log('je clique ici pour fermer');
 		if( classie.has( overlay, 'open' ) ) {
 			classie.remove( overlay, 'open' );
 			classie.remove( container, 'overlay-open' );

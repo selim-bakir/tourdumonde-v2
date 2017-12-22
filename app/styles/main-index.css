@@ -232,7 +232,7 @@ button.slider-switch:hover {
     position: absolute;
     display: block;
     height: calc(100% + 0.2px);
-    opacity: 0.7; }
+    opacity: 1; }
 
 @media screen and (min-aspect-ratio: 1280 / 850) {
   .img-dragger .img-wrap span img {
@@ -373,7 +373,11 @@ button.content-switch::before {
     content: 'X';
     top: 20px;
     font-family: arial;
-    animation: none !important; }
+    animation: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -ms-animation: none !important;
+    -o-animation: none !important; }
   @media screen and (max-width: 690px) {
     .show-content .current button.content-switch {
       transform: translate3d(36vw, 30%, 0);
@@ -593,6 +597,8 @@ button.content-switch::before {
   left: 0;
   background: rgba(153, 204, 51, 0.9);
   z-index: 1000; }
+  .overlay-map .i4ewOd-pzNkMb-bMcfAe {
+    pointer-events: none; }
   .overlay-map h2 {
     font-family: 'lobster', serif;
     margin: 9px 0 0 21px; }
@@ -1156,7 +1162,7 @@ a {
   width: 94%; }
   @media screen and (max-width: 400px) {
     .cbp-rfgrid {
-      width: 91%; } }
+      width: 86%; } }
   .cbp-rfgrid li {
     position: relative;
     float: left;

@@ -269,12 +269,12 @@
 
 
             $('.next').click(function(slide) {
-                console.log(this.dd);
+                // console.log(this.dd);
                 self.dd.setStep(self.dd.getStep()[0] + 1);
                 return false;
             });
             $('.prev').click(function(slide) {
-                console.log(this.dd);
+                // console.log(this.dd);
                 self.dd.setStep(self.dd.getStep()[0] - 1);
                 return false;
             });
@@ -345,7 +345,7 @@
             self.isFullscreen = !self.isFullscreen;
 
             self.isAnimating = false;
-            console.log('jpasse par là');
+            // console.log('jpasse par là');
         };
 
         if (support.transitions) {
