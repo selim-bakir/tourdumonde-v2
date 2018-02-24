@@ -173,6 +173,7 @@
                         // if not fullscreen don't reveal the content. If you want to navigate directly to the content then remove this check.
                         // if( !self.isFullscreen ) return;
                         self._toggleContent(currentSlide);
+                        $(".current .showPhotos", this).click();
                         break;
                         // right and left keys
                     case 37:

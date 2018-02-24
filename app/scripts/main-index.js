@@ -108,7 +108,7 @@ function getPhotoFlickr(id, country) {
                 url = 'http://farm' + photo.farm + '.static.flickr.com/' +
                     photo.server + '/' + photo.id + '_' + photo.secret;
                 gallery
-                    .append('<li><a rel="group" class="fancybox" data-caption="' + photo.title + '" data-fancybox="images" href="' + url + '_b.jpg' + '" target="_blank"><img src="' + url + '_m.jpg' + '"></a></li>');
+                    .append('<li><a rel="group" class="fancybox" data-caption="' + photo.title + '" data-fancybox="images-' + data.photoset.id + '" href="' + url + '_b.jpg' + '" target="_blank"><img src="' + url + '_m.jpg' + '"></a></li>');
             });
         });
     } else {
@@ -129,7 +129,7 @@ $(document).ready(function () {
         $('.slider-switch').click();
     }
     setTimeout(function(){
-        $('.slide[data-content="content-1"] .next').click()
-    }, 1000);
+        $('.slide[data-content="content-5"]').click()
+    }, 2000);
     
 });

@@ -593,7 +593,7 @@ button.content-switch::before {
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: -10px;
   left: 0;
   background: rgba(153, 204, 51, 0.9);
   z-index: 1000; }
@@ -601,7 +601,8 @@ button.content-switch::before {
     pointer-events: none; }
   .overlay-map h2 {
     font-family: 'lobster', serif;
-    margin: 9px 0 0 21px; }
+    margin: 9px 0 0 21px;
+    padding-top: 6px; }
   .overlay-map nav {
     text-align: center;
     position: relative;
@@ -688,7 +689,7 @@ body {
   -webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
   transition: transform 0.5s, visibility 0s 0.5s; }
   .overlay-map-contentpush > div {
-    position: absolute;
+    position: relative;
     top: 0;
     height: 48px;
     width: 100%;
@@ -730,6 +731,9 @@ body {
     background-position-x: 0px; }
   to {
     background-position-x: 110px; } }
+
+.theme-orange #step-wrapper.widget {
+  padding: 0 !important; }
 
 article,
 aside,
