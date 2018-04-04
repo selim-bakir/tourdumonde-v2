@@ -83,7 +83,7 @@ html.js {
     padding: 15px;
 }
 
-.dragslider h2 span {
+.dragslider h2 span, .dragslider h3 {
     display: block;
     font-size: 27%;
     font-family: 'lobster', sans-serif;
@@ -92,6 +92,10 @@ html.js {
     @include grid-media-query(palm) {
         font-size: 35%;
     }
+}
+
+.dragslider h3{
+    font-size: 2em;
 }
 
 
@@ -568,7 +572,7 @@ button.content-switch {
             transition-property: transform, opacity;
             -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-            float: left;
+            // float: left;
             width: 100%;
             margin-bottom: 20px;
         }

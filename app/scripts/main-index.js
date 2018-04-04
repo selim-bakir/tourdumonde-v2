@@ -129,7 +129,7 @@ $(document).ready(function () {
         $('.slider-switch').click();
     }
     setTimeout(function(){
-        $('.slide[data-content="content-5"]').click()
+        $('.slide[data-content="content-7"]').click()
     }, 2000);
     
 });

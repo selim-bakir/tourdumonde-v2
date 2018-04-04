@@ -111,15 +111,18 @@ html.js {
 .no-js .dragslider h2 {
   padding: 15px; }
 
-.dragslider h2 span {
+.dragslider h2 span, .dragslider h3 {
   display: block;
   font-size: 27%;
   font-family: 'lobster', sans-serif;
   font-weight: 300;
   padding-top: 0.5em; }
   @media only screen and (max-width: 680px) {
-    .dragslider h2 span {
+    .dragslider h2 span, .dragslider h3 {
       font-size: 35%; } }
+
+.dragslider h3 {
+  font-size: 2em; }
 
 /* Switch button */
 button.slider-switch {
@@ -500,7 +503,6 @@ button.content-switch::before {
   transition-property: transform, opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  float: left;
   width: 100%;
   margin-bottom: 20px; }
 
